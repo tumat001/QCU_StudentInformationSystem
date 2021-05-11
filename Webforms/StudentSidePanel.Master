@@ -1,0 +1,116 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="StudentSidePanel.master.vb" Inherits="OnlineViewingOfGrades.StudentSidePanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body{
+            background-image:url("../images/photo_backgrounds_textures_app05.jpg");
+            background-size:100%;
+            background-repeat: no-repeat;
+            
+        }
+        .navbar{
+            flex-wrap: wrap;        
+            width:auto;  
+            background-color: dimgray;
+            text-align:center;
+            opacity:0.8;
+        }
+        .navbar-right{
+            text-align-last:right;
+            display: flex; 
+            justify-content: flex-end
+        }
+        .content{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            height:100%;
+        }
+        .centralize{
+            width:90%;
+            margin:auto;
+        }
+        
+        .table1{
+            
+            background-color: azure;      
+            flex-wrap:wrap;
+            width:100%;
+            align-self:center;
+            align-content:center;
+            font-size:20px;
+            border: 2px solid black; 
+           
+        }
+        .table1 tr:nth-child(even) td {
+            background-color: beige;
+        }
+        .gradetable1:nth-child(even) {background: #CCC}
+        .studNameDiv{
+            background-color:azure;
+            flex-wrap:wrap;
+            align-content:center;
+            width:100%;
+
+        }
+        .auto-style4 {
+            width: 110px;
+            background-color: cornsilk
+        }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div ><br /><h1>Online Viewing of Grades</h1>
+
+            </div>
+        </div>
+
+    <div style="background-color:lightblue;", class="centralize">
+        <h2>
+            <asp:Label ID="WelcomeLabel" runat="server" Font-Bold="False" Font-Size="Medium"></asp:Label>
+        </h2>
+    </div>
+    
+
+    <div>
+        <table style="width:90%; background-color:lightblue; margin:auto; table-layout:fixed";>
+            <tr>                 
+                <td colspan="1" class="auto-style4">                    
+                    <div>
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                            <asp:LinkButton ID="EditProfileButton" runat="server" Width="150px">Edit Profile</asp:LinkButton>
+                            <br />
+                        </p>
+                        <p>
+                            <asp:LinkButton ID="LogOutButton" runat="server" Width="150px">Log Out</asp:LinkButton>
+                            <br />
+                        </p>
+                    </div>
+                </td>
+                <td colspan="1">
+                    <div>
+
+                        <asp:ContentPlaceHolder ID="StudentControlPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                </td>
+                
+            </tr>
+        </table>
+
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="AdminSidePanel.master.vb" Inherits="OnlineViewingOfGrades.AdminSidePanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body{
+            background-image:url("../images/photo_backgrounds_textures_app05.jpg");
+            background-size:100%;
+            background-repeat: repeat-y
+            
+        }
+        .navbar{
+            flex-wrap: wrap;        
+            width:auto;  
+            background-color: dimgray;
+            text-align:center;
+            opacity:0.8;
+        }
+        .navbar-right{
+            text-align-last:right;
+            display: flex; 
+            justify-content: flex-end
+        }
+        .content{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            height:100%;
+        }
+        .centralize{
+            width:90%;
+            margin:auto;
+        }       
+        .table1{
+            
+            background-color: azure;      
+            flex-wrap:wrap;
+            width:100%;
+            align-self:center;
+            align-content:center;
+            font-size:20px;
+            border: 2px solid black; 
+           
+        }
+        .table1 tr:nth-child(even) td {
+            background-color: beige;
+        }
+        .gradetable1:nth-child(even) {background: #CCC}
+        .studNameDiv{
+            background-color:azure;
+            flex-wrap:wrap;
+            align-content:center;
+            width:100%;
+
+        }
+        .auto-style3 {
+            width: 185px;
+            background-color: white;
+        }
+        .auto-style2 {
+            width: 181px;
+            background-color: beige;
+        }
+        .auto-style1 {
+            width: 635px;
+            background-color: azure;
+        }
+               
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div ><br /><h1>Online Viewing of Grades</h1>
+
+            </div>
+        </div>
+    
+        <div  class="centralize">
+
+    <table style="width:100%">
+        <tr>
+            <td colspan="2" class="auto-style3">
+                <asp:Label ID="WelcomeUserLabel" runat="server"></asp:Label>
+            </td>
+            
+           
+        </tr>
+        <tr>
+            <td class="auto-style2">
+               <h4>COURSES</h4>
+               <ul>
+                   <li> <asp:LinkButton ID="LinkButton1" runat="server">Information Technology</asp:LinkButton> </li>
+                   <li> <asp:LinkButton ID="LinkButton2" runat="server">Industrial Engineering</asp:LinkButton></li>
+                   <li> <asp:LinkButton ID="LinkButton3" runat="server">Accounting</asp:LinkButton> </li>
+                   <li> <asp:LinkButton ID="LinkButton4" runat="server">Electronics Engineering</asp:LinkButton>  </li>
+               </ul>
+
+
+            </td>
+            <td rowspan="4" class="auto-style1" >
+                <div>
+                    <asp:ContentPlaceHolder ID="AdminControlPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>  
+        </tr>
+        <tr>
+            <td class="auto-style2">
+                <h4>ACCOUNT INFORMATION</h4>
+                <ul>
+                    <li>  <asp:LinkButton ID="ViewAdminTableButton" runat="server">View Admin Accounts Table</asp:LinkButton> </li>
+                    <li> <asp:LinkButton ID="ViewStudentTableButton" runat="server">View Student Accounts Table</asp:LinkButton> </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: cornflowerblue" class="auto-style2"> <ul>
+                <li> 
+                    <asp:LinkButton ID="EditProfileButton" runat="server">Edit Profile</asp:LinkButton>
+                </li>
+                <li>
+                    <asp:LinkButton ID="LogOutButton" runat="server">Log Out</asp:LinkButton>
+                </li>
+                                                    </ul>
+            </td>
+        </tr>  
+    </table>
+        </div>
+    </form>
+</body>
+</html>

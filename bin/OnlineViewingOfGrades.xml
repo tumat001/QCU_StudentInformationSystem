@@ -1,0 +1,2242 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OnlineViewingOfGrades
+</name>
+</assembly>
+<members>
+<member name="T:OnlineViewingOfGrades.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:OnlineViewingOfGrades.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:OnlineViewingOfGrades.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:OnlineViewingOfGrades.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:OnlineViewingOfGrades.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:OnlineViewingOfGrades.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._LabelTitle">
+<summary>
+LabelTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._UsernameLabel">
+<summary>
+UsernameLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._UsernameField">
+<summary>
+UsernameField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._UsernameRequiredValidator">
+<summary>
+UsernameRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PasswordLabel">
+<summary>
+PasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PasswordField">
+<summary>
+PasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PasswordRequiredValidator">
+<summary>
+PasswordRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordRequiredValidator">
+<summary>
+ConfirmPasswordRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._GeneratePasswordCheckbox">
+<summary>
+GeneratePasswordCheckbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PrivilageLabel">
+<summary>
+PrivilageLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PrivilageModeDropDownList">
+<summary>
+PrivilageModeDropDownList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PrivilageModeRequiredValidator">
+<summary>
+PrivilageModeRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ErrorLabel">
+<summary>
+ErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._AddAdminButton">
+<summary>
+AddAdminButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._LabelTitle">
+<summary>
+LabelTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._UsernameLabel">
+<summary>
+UsernameLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._UsernameField">
+<summary>
+UsernameField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._UsernameRequiredValidator">
+<summary>
+UsernameRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._PasswordLabel">
+<summary>
+PasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._PasswordField">
+<summary>
+PasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._PasswordRequiredValidator">
+<summary>
+PasswordRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordRequiredValidator">
+<summary>
+ConfirmPasswordRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._GeneratePasswordCheckbox">
+<summary>
+GeneratePasswordCheckbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._EmailLabel">
+<summary>
+EmailLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._EmailField">
+<summary>
+EmailField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._EmailRequiredValidator">
+<summary>
+EmailRequiredValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ErrorLabel">
+<summary>
+ErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._AddStudentButton">
+<summary>
+AddStudentButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._SelectedAccountsLabel">
+<summary>
+SelectedAccountsLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._SelectedAccountsListBox">
+<summary>
+SelectedAccountsListBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._PrivilageModeLabel">
+<summary>
+PrivilageModeLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._PrivilageModeDropDownList">
+<summary>
+PrivilageModeDropDownList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._SetPasswordLabel">
+<summary>
+SetPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._NoChangeRadioButton">
+<summary>
+NoChangeRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._SetManuallyRadioButton">
+<summary>
+SetManuallyRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._AutoGenerateRadioButton">
+<summary>
+AutoGenerateRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ManualSetPasswordLabel">
+<summary>
+ManualSetPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ManualSetPasswordField">
+<summary>
+ManualSetPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ErrorLabel">
+<summary>
+ErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ConfirmChangesButton">
+<summary>
+ConfirmChangesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._CancelButton">
+<summary>
+CancelButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._InsLabel01">
+<summary>
+InsLabel01 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._CurrentPasswordLabel">
+<summary>
+CurrentPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._CurrentPasswordField">
+<summary>
+CurrentPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._RequiredOldPasswordValidator">
+<summary>
+RequiredOldPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._NewPasswordLabel">
+<summary>
+NewPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._NewPasswordField">
+<summary>
+NewPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._RequiredNewPasswordValidator">
+<summary>
+RequiredNewPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._RequiredConfirmPasswordValidator">
+<summary>
+RequiredConfirmPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._ShowNewPasswordCheckBox">
+<summary>
+ShowNewPasswordCheckBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._CustomErrorLabel">
+<summary>
+CustomErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._ChangePasswordButton">
+<summary>
+ChangePasswordButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SelectedAccountsLabel">
+<summary>
+SelectedAccountsLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SelectedAccountsListBox">
+<summary>
+SelectedAccountsListBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SetEmailLabel">
+<summary>
+SetEmailLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._NoChangeEmailRadioButton">
+<summary>
+NoChangeEmailRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SetManuallyEmailRadioButton">
+<summary>
+SetManuallyEmailRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ManualSetEmailLabel">
+<summary>
+ManualSetEmailLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ManualSetEmailField">
+<summary>
+ManualSetEmailField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ErrorInEmailLabel">
+<summary>
+ErrorInEmailLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SetPasswordLabel">
+<summary>
+SetPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._NoChangePasswordRadioButton">
+<summary>
+NoChangePasswordRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SetManuallyPasswordRadioButton">
+<summary>
+SetManuallyPasswordRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._AutoGeneratePasswordRadioButton">
+<summary>
+AutoGeneratePasswordRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ManualSetPasswordLabel">
+<summary>
+ManualSetPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ManualSetPasswordField">
+<summary>
+ManualSetPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ErrorInPasswordLabel">
+<summary>
+ErrorInPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ConfirmChangesButton">
+<summary>
+ConfirmChangesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._CancelButton">
+<summary>
+CancelButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._SearchField">
+<summary>
+SearchField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._SearchNameButton">
+<summary>
+SearchNameButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._LabelTitle">
+<summary>
+LabelTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._AdminGridView">
+<summary>
+AdminGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._UnselectAllButton">
+<summary>
+UnselectAllButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._SelectAllButton">
+<summary>
+SelectAllButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._CreateAdminButton">
+<summary>
+CreateAdminButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._DeleteSelectedButton">
+<summary>
+DeleteSelectedButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._EditPropertiesButton">
+<summary>
+EditPropertiesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._SearchField">
+<summary>
+SearchField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._SearchNameButton">
+<summary>
+SearchNameButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._StudentGridView">
+<summary>
+StudentGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._UnselectAllButton">
+<summary>
+UnselectAllButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._SelectAllButton">
+<summary>
+SelectAllButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._CreateStudentButton">
+<summary>
+CreateStudentButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._SyncAccountsButton">
+<summary>
+SyncAccountsButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._LabelIns02">
+<summary>
+LabelIns02 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._DeleteSelectedButton">
+<summary>
+DeleteSelectedButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._EditPropertiesButton">
+<summary>
+EditPropertiesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._head">
+<summary>
+head control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._WelcomeUserLabel">
+<summary>
+WelcomeUserLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton1">
+<summary>
+LinkButton1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton2">
+<summary>
+LinkButton2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton3">
+<summary>
+LinkButton3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton4">
+<summary>
+LinkButton4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._AdminControlPlaceHolder">
+<summary>
+AdminControlPlaceHolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._ViewAdminTableButton">
+<summary>
+ViewAdminTableButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._ViewStudentTableButton">
+<summary>
+ViewStudentTableButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._EditProfileButton">
+<summary>
+EditProfileButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._LogOutButton">
+<summary>
+LogOutButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._UsernameField">
+<summary>
+UsernameField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._RequiredUsernameValidator">
+<summary>
+RequiredUsernameValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._PasswordField">
+<summary>
+PasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._RequiredPasswordValidator">
+<summary>
+RequiredPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._ShowPasswordCheckbox">
+<summary>
+ShowPasswordCheckbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._IncorrectInputLabel">
+<summary>
+IncorrectInputLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._LogInButton">
+<summary>
+LogInButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.LogInPage._ForgotPasswordButton">
+<summary>
+ForgotPasswordButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._InsLabel01">
+<summary>
+InsLabel01 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._CurrentPasswordLabel">
+<summary>
+CurrentPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._CurrentPasswordField">
+<summary>
+CurrentPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._RequiredOldPasswordValidator">
+<summary>
+RequiredOldPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._NewPasswordLabel">
+<summary>
+NewPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._NewPasswordField">
+<summary>
+NewPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._RequiredNewPasswordValidator">
+<summary>
+RequiredNewPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._ConfirmPasswordLabel">
+<summary>
+ConfirmPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._ConfirmPasswordField">
+<summary>
+ConfirmPasswordField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._RequiredConfirmPasswordValidator">
+<summary>
+RequiredConfirmPasswordValidator control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._ShowNewPasswordCheckBox">
+<summary>
+ShowNewPasswordCheckBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._CustomErrorLabel">
+<summary>
+CustomErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._ChangePasswordButton">
+<summary>
+ChangePasswordButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._CancelButton">
+<summary>
+CancelButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._StudentNameLabel">
+<summary>
+StudentNameLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._YearDropDownList">
+<summary>
+YearDropDownList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._CampusLabel">
+<summary>
+CampusLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._SchoolYearLabel">
+<summary>
+SchoolYearLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._TermLabel">
+<summary>
+TermLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._StudentGradeInfoGridView">
+<summary>
+StudentGradeInfoGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._DownloadGradesButton">
+<summary>
+DownloadGradesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._head">
+<summary>
+head control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._WelcomeLabel">
+<summary>
+WelcomeLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._EditProfileButton">
+<summary>
+EditProfileButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._LogOutButton">
+<summary>
+LogOutButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._StudentControlPlaceHolder">
+<summary>
+StudentControlPlaceHolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:OnlineViewingOfGrades.BaseAccount.Equals(System.Object)">
+ <summary>
+ Compares this object to the given parameter
+ </summary>
+ <param name="obj"></param>
+ <returns>True if the given object is a base account and has the same username. False otherwise</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangeEmailAddressOfAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAdminAccountAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangeEmailAddressOfAccountAction.ChangeEmailAddressOfStudentAccount(System.String,System.String)">
+ <summary>
+ Changes the email address of the student account into the provided email address
+ </summary>
+ <param name="username"></param>
+ <param name="newEmail"></param>
+ <returns>True if the email address of the account was changed, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateStudentAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAdminAccountAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateStudentAccountAction.CreateStudentAccount(OnlineViewingOfGrades.StudentAccount.Builder,System.String)">
+ <summary>
+ Attemps to create a student account with the provided username and password.
+ </summary>
+ <param name="buildInfo"></param>
+ <param name="password"></param>
+ <returns>True if the account was successfuly created, False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteAdminAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.DeleteAdminAccountAction"/> that allows the provided executor to delete accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteAdminAccountAction.DeleteAdminAccount(System.String)">
+ <summary>
+ Deletes specified admin account. The deletion fails if the specified admin account is the default admin.
+ </summary>
+ <returns>True if the account was deleted, False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteAdminAccountAction.DeleteAllAdminAccounts">
+ <summary>
+ Deletes all admin accounts, except for the default admin
+ </summary>
+ <returns>Number of deleted accounts</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteStudentAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.DeleteStudentAccountAction"/> that allows the provided executor to delete accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteStudentAccountAction.DeleteStudentAccount(System.String)">
+ <summary>
+ Deletes the student account associated with the given username
+ </summary>
+ <param name="username"></param>
+ <returns>True when the student account is deleted, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteStudentAccountAction.DeleteAllStudentAccounts">
+ <summary>
+ Deletes all student accounts to connected database responsible for carrying student accounts
+ </summary>
+ <returns>The number of accounts deleted</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateAccountsForAccountlessStudentsAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAccountsForAccountlessStudentsAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateAccountsForAccountlessStudentsAction.CreateAccountsForAccountlessStudents(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Creates accounts for students in provided student source who do not yet have an account (based on username)<br></br>
+ Relies on <see cref="M:OnlineViewingOfGrades.PeekAccountlessStudentsQuery.PeekAccountlessStudents(OnlineViewingOfGrades.IStudentSource)"/> to determine accounts to be created
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A <see cref="T:OnlineViewingOfGrades.SyncCreationOfStudentAccountsResults"/> that contains a list of students whose accounts were not created, 
+ and a dictionary containing the generated accounts with their generated passwords
+ </returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteStudentAccountsNotInSourceAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.DeleteStudentAccountsNotInSourceAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.DeleteStudentAccountsNotInSourceAction.DeleteStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Deletes accounts of students whose student cannot be found in the provided (based on username)<br></br>
+ Relies on <see cref="M:OnlineViewingOfGrades.PeekStudentAccountsNotInSourceQuery.PeekStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)"/> to determine accounts to be deleted
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of student accounts that should be deleted but were not, if any. This list does not include student accounts whose students are in the provided student source</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.GetAccountQuery.GetStudentAccount(System.String)">
+ <summary>
+ Gets student account information with the provided username. This information does not contain the account's password
+ </summary>
+ <param name="username">The account username whose information should be gotten from</param>
+ <returns>A student account that contains information. Returns Nothing when no account with such username exists</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.GetAccountQuery.GetAllStudentAccounts">
+ <summary>
+ Gets all student accounts, along with their information. This does not include the account's passwords
+ </summary>
+ <returns>A list of student accounts containing their information</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.GetAccountQuery.GetAdminAccount(System.String)">
+ <summary>
+ Gets the admin account, along with its information. Does not include the account's password
+ </summary>
+ <param name="username"></param>
+ <returns>AdminAccount object, which includes its information</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.GetAccountQuery.GetAllAdminAccounts">
+ <summary>
+ Gets all admin accounts, along with their information. This does not include the account's passwords
+ </summary>
+ <returns>A list of admin accounts containing their information</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.GetAccountUsernameQuery.GetAllStudentAccountUsernames">
+ <summary>
+ Gets all student account usernames in the database
+ </summary>
+ <returns>A list of student usernames</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.GetPrivilageModeOfAccountQuery.GetPrivilageModeOfStudentAccount(System.String)">
+ <summary>
+ Gets the <see cref="T:OnlineViewingOfGrades.PrivilageMode"/> of the student account.
+ </summary>
+ <param name="username"></param>
+ <returns></returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.GetPrivilageModeOfAccountQuery.GetPrivilageModeOfAdminAccount(System.String)">
+ <summary>
+ Gets the <see cref="T:OnlineViewingOfGrades.PrivilageMode"/> of an admin account.
+ </summary>
+ <param name="username"></param>
+ <returns>The privilage mode of the admin account</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.IfAccountExistsQuery.IfStudentAccountExists(System.String)">
+ <summary>
+ Checks whether the student account associated with the given username exists
+ </summary>
+ <param name="username"></param>
+ <returns>True if the student account with the given username exists, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.IfAccountExistsQuery.IfAdminAccountExists(System.String)">
+ <summary>
+ Checks whether the admin account associated with the given username exists
+ </summary>
+ <param name="username"></param>
+ <returns>True if the admin account with the given username exists, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.IsPasswordOfAccountEqualQuery.IsPasswordOfStudentAccountEqualTo(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password. False if password does not match</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.IsPasswordOfAccountEqualQuery.IsPasswordOfAdminAccountEqualTo(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password. False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PeekAccountlessStudentsQuery.PeekAccountlessStudents(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Collects a list of students in provided student source that do not have an account based on their username.<br></br>
+ A student's student number is used (as the username) to determine if they possess an account.
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of students who do not have an account</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PeekStudentAccountsNotInSourceQuery.PeekStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Collects a list of accounts whose username (student number for this implementation) cannot be found in the student source
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of student accounts not in the student source</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.EmailAddressConstraint.EvaluateEmailAddress(System.String)">
+ <summary>
+ Evaluates the candidate email address to see if it can be accepted by the set constraints
+ </summary>
+ <param name="text"></param>
+ <returns>True if the input passes the constraints. False otherwise. This method may throw <see cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"/></returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.BasePortalAction.#ctor(System.Collections.Generic.IReadOnlyList{OnlineViewingOfGrades.PrivilageMode},System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="allowedPrivilageModes"></param>
+ <param name="executorUser"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePasswordOfOtherAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.ChangePasswordOfOtherAccountAction"/> that allows the provided executor to change the password of other accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePasswordOfOtherAccountAction.ChangePasswordOfStudentAccount(System.String,System.String)">
+ <summary>
+ Change the current password of the provided username with the provided password
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newPassword">The new password to use</param>
+ <returns>True if password of account was changed (even if the new password is equal to the old one). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePasswordOfOtherAccountAction.ChangePasswordOfAdminAccount(System.String,System.String)">
+ <summary>
+ Changes the current password of the provided username with the provided password
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newPassword">The new password to use</param>
+ <returns>True if password of account was changed (even if the new password is equal to the old one). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePasswordOfOwnAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.ChangePasswordOfOwnAccountAction"/> that allows the provided executor to change the password of own account.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePasswordOfOwnAccountAction.ChangePasswordOfOwnAccount(System.String)">
+ <summary>
+ Changes the current password of the executing account with the provided password
+ </summary>
+ <param name="newPassword">The new password to use</param>
+ <returns>True if password of account was changed (even if the new password is equal to the old one). False otherwise</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePrivilageModeOfAdminAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.ChangePrivilageModeOfAdminAccountAction"/> that allows the provided executor to change the privilage mode of other admin accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangePrivilageModeOfAdminAccountAction.ChangePrivilageModeOfAdminAccount(System.String,OnlineViewingOfGrades.PrivilageMode)">
+ <summary>
+ Changes the privilage mode of an admin account to the provided privilage mode
+ </summary>
+ <param name="username">The account to change the privilage mode of</param>
+ <param name="newPrivilageMode">The new privilage mode. Cannot be <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/></param>
+ <returns>True if privilage mode of provided account was changed. False otherwise (
+ or if provided privilage mode was <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/>)</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateAdminAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAdminAccountAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateAdminAccountAction.CreateAdminAccount(OnlineViewingOfGrades.AdminAccount.Builder,System.String)">
+ <summary>
+ Attemps to create an admin account with the provided attributes in the provided <see cref="T:OnlineViewingOfGrades.AdminAccount.Builder"/>.<br /><br />
+ Passing <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/> as the admin privilage mode will cause this method to return false, 
+ since a new default admin cannot be created.
+ </summary>
+ <param name="buildInfo"></param>
+ <param name="password"></param>
+ <returns>True, if the admin account was created. False otherwise.</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.CreateAdminAccountAction.CreateDefaultAdminAccount(OnlineViewingOfGrades.AdminAccount.Builder,System.String)">
+ <summary>
+ For use of <see cref="T:OnlineViewingOfGrades.PortalNormalizer"/> only!
+ </summary>
+ <param name="buildInfo"></param>
+ <param name="password"></param>
+ <returns></returns>
+</member>
+<member name="T:OnlineViewingOfGrades.PortalNormalizer">
+ <summary>
+ A class responsible in checking to see if data in the portal database is normal.
+ <br/><br/>
+ Right now, its only function is to see if the database has a default admin
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalNormalizer.IsPortalNormalized">
+ <summary>
+ Checks if portal is in normal conditions.
+ <br/><br/>
+ As of now, this only checks for the prescence of a default admin.
+ </summary>
+ <returns>True if portal is in normal condition. False otherwise</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalNormalizer.NormalizePortal">
+ <summary>
+ Normalizes the portal data.
+ <br/><br/>
+ Right now this only creates a default admin if one does not exist
+ </summary>
+</member>
+<member name="T:OnlineViewingOfGrades.DefaultPasswordEmailTemplate">
+ <summary>
+ A template for an email to be sent to students when their account has been given a default password.
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.#ctor(System.Collections.Generic.List{System.String},System.String)">
+ <summary>
+ Sets the constraints to the provided strings. The text must contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+ <param name="errorMessage">The custom error message in the thrown <see cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"/> when calling <see cref="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.Evaluate(System.String)"/></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.#ctor(System.Collections.Generic.List{System.String})">
+ <summary>
+ Sets the constraints to the provided strings. The text must contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.#ctor(System.String[])">
+ <summary>
+ Sets the constraints to the provided strings. The text must contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.Evaluate(System.String)">
+ <summary>
+ Evaluates the text to see if text follows the given constraints.
+ </summary>
+ <param name="text"></param>
+ <returns>True if the text follows the constraints. Throws exception otherwise.</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringMustContainCharacterConstraint.StringMustContainCharacterException"></exception>
+ <exception cref="T:System.NullReferenceException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustContainCharacterConstraint.TryEvaluate(System.String)">
+ <summary>
+ Evaluates the text to see if text follows the given constraints.
+ </summary>
+ <param name="text"></param>
+ <returns>True if the text follows the constraints. False otherwise (or if text is null).</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.#ctor(System.Collections.Generic.IReadOnlyList{System.String},System.String)">
+ <summary>
+ Sets the constraints to the provided strings. The text must not contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+ <param name="customErrorMessage">The custom error message in the thrown <see cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"/> when calling <see cref="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.Evaluate(System.String)"/></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.#ctor(System.Collections.Generic.IReadOnlyList{System.String})">
+ <summary>
+ Sets the constraints to the provided strings. The text must not contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.#ctor(System.String[])">
+ <summary>
+ Sets the constraints to the provided strings. The text must not contain all the strings provided to pass the constraint
+ </summary>
+ <param name="characters"></param>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.Evaluate(System.String)">
+ <summary>
+ Evaluates the text to see if text follows the given constraints.
+ </summary>
+ <param name="text"></param>
+ <returns>True if the text follows the constraints. Throws exception otherwise.</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.StringMustNotContainCharacterException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustNotContainCharacterConstraint.TryEvaluate(System.String)">
+ <summary>
+ Evaluates the text to see if text follows the given constraints.
+ </summary>
+ <param name="text"></param>
+ <returns>True if the text follows the constraints. False otherwise.</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustBeWithinLengthBoundsConstraint.Evaluate(System.String)">
+ <summary>
+ Evaluates the text to see if the length is within bounds of the constraint
+ </summary>
+ <param name="text"></param>
+ <returns>True if text passes constraints. Throws <see cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"/> otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.StringMustBeWithinLengthBoundsConstraint.TryEvaluate(System.String)">
+ <summary>
+ Evaluates the text to see if the length is within bounds of the constraint
+ </summary>
+ <param name="text"></param>
+ <returns>True if text passes constraints. False otherwise</returns>
+</member>
+<member name="T:OnlineViewingOfGrades.Student">
+ <summary>
+ A class that captures infomation about a student
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.UsernamePasswordConstraint.Evaluate(System.String)">
+ <summary>
+ Evaluates the candidate new username or password to see if it can be accepted by the set constraints
+ </summary>
+ <param name="text"></param>
+ <returns>True if the input passes the constraints. False otherwise. This method may throw <see cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"/></returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="T:OnlineViewingOfGrades.AdminAccount">
+ <summary>
+ Represents an admin account of the portal database. This object does not contain the account's password
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.AdminAccount.Equals(System.Object)">
+ <summary>
+ Compares this object to the given parameter
+ </summary>
+ <param name="obj"></param>
+ <returns>True if the given object is an admin account and has the same username. False otherwise</returns>
+</member>
+<member name="T:OnlineViewingOfGrades.AdminAccount.Builder">
+ <summary>
+ Represents a template for building admin accounts. This may not represent an already existing admin account.
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.#ctor(System.String)">
+ <summary>
+ Creates a PortalAccountDatabaseActions, which allows one to make changes related to the portal's accounts.
+ <br /><br />
+ The username will be used to determine the privilage level, and this determines what actions can or cannot be done.
+ </summary>
+ <param name="username">The username of an account that will act as the executor of this object's actions</param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.AttemptCreateStudentAccount(OnlineViewingOfGrades.StudentAccount.Builder,System.String)">
+ <summary>
+ Attemps to create a student account with the provided username and password.<br></br>
+ Note that this would fail if an account (student or admin) already has a username that is the same as the provided.
+ </summary>
+ <param name="buildInfo"></param>
+ <param name="password"></param>
+ <returns>True if the account was successfuly created, False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.AttemptCreateStudentAccount(OnlineViewingOfGrades.StudentAccount.Builder)">
+ <summary>
+ Attemps to create a student account with the provided username. The password given will be randomly generated.<br></br>
+ Note that this would fail if an account (student or admin) already has a username that is the same as the provided.
+ </summary>
+ <param name="buildInfo"></param>
+ <returns>The generated password for the student account. Returns Nothing when the creation of the account has failed</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.CreateStudentAccount(OnlineViewingOfGrades.StudentAccount.Builder,System.String)">
+ <summary>
+ </summary>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.IfStudentAccountExists(System.String)">
+ <summary>
+ Checks whether the student account associated with the given username exists
+ </summary>
+ <param name="username"></param>
+ <returns>True if the student account with the given username exists, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.DeleteStudentAccount(System.String)">
+ <summary>
+ Deletes the student account associated with the given username
+ </summary>
+ <param name="username"></param>
+ <returns>True when the student account is deleted, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.DeleteAllStudentAccounts">
+ <summary>
+ Deletes all student accounts to connected database responsible for carrying student accounts
+ </summary>
+ <returns>The number of accounts deleted</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.GetStudentAccount(System.String)">
+ <summary>
+ Gets student account information with the provided username. This information does not contain the account's password
+ </summary>
+ <param name="username">The account username whose information should be gotten from</param>
+ <returns>A student account that contains information. Returns Nothing when no account with such username exists</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.GetPrivilageModeOfStudentAccount(System.String)">
+ <summary>
+ Gets the <see cref="T:OnlineViewingOfGrades.PrivilageMode"/> of the student account.
+ </summary>
+ <param name="username"></param>
+ <returns></returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.GetAllStudentAccounts">
+ <summary>
+ Gets all student accounts, along with their information. This does not include the account's passwords
+ </summary>
+ <returns>A list of student accounts containing their information</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.GetAllStudentAccountUsernames">
+ <summary>
+ Gets all student account usernames in the database
+ </summary>
+ <returns>A list of student usernames</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.IsPasswordOfStudentAccountEqualTo(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password. False if password does not match</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.ChangePasswordOfStudentAccount(System.String,System.String)">
+ <summary>
+ Change the current password of the provided username with the provided password
+ <br /><br />
+ No privilage level is required when changing one's own password
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newPassword">The new password to use</param>
+ <returns>True if password of account was changed (even if the new password is equal to the old one). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.ChangeEmailAddressOfStudentAccount(System.String,System.String)">
+ <summary>
+ Changes the email address of the student account into the provided email address
+ </summary>
+ <param name="username"></param>
+ <param name="newEmail"></param>
+ <returns>True if the email address of the account was changed, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.PeekAccountlessStudents(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Collects a list of students in provided student source that do not have an account based on their username.<br></br>
+ A student's student number is used (as the username) to determine if they possess an account.
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of students who do not have an account</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.PeekStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Collects a list of accounts whose username (student number for this implementation) cannot be found in the student source
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of student accounts not in the student source</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.CreateAccountsForAccountlessStudents(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Creates accounts for students in provided student source who do not yet have an account (based on username)<br></br>
+ Relies on <see cref="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.PeekAccountlessStudents(OnlineViewingOfGrades.IStudentSource)"/> to determine accounts to be created
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A <see cref="T:OnlineViewingOfGrades.SyncCreationOfStudentAccountsResults"/> that contains a list of students whose accounts were not created, 
+ and a dictionary containing the generated accounts with their generated passwords
+ </returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.DeleteStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)">
+ <summary>
+ Deletes accounts of students whose student cannot be found in the provided studetntSource (based on username)<br></br>
+ Relies on <see cref="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.PeekStudentAccountsNotInStudentSource(OnlineViewingOfGrades.IStudentSource)"/> to determine accounts to be deleted
+ </summary>
+ <param name="studentSource"></param>
+ <returns>A list of student accounts that should be deleted but were not, if any.</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.AttemptCreateAdminAccount(OnlineViewingOfGrades.AdminAccount.Builder,System.String)">
+ <summary>
+ Attemps to create an admin account with the provided attributes in the provided <see cref="T:OnlineViewingOfGrades.AdminAccount.Builder"/>.<br /><br />
+ Passing <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/> as the admin privilage mode will cause this method to return false, 
+ since a new default admin cannot be created.
+ </summary>
+ <param name="buildInfo"></param>
+ <param name="password"></param>
+ <returns>True, if the admin account was created. False otherwise.</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.AttemptCreateAdminAccount(OnlineViewingOfGrades.AdminAccount.Builder)">
+ <summary>
+ Attemps to create an admin account with the provided attributes in the provided <see cref="T:OnlineViewingOfGrades.AdminAccount.Builder"/>. A default password will be generated for this account<br /><br />
+ Passing <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/> as the admin privilage mode will cause this method to return false, because a new default admin cannot be created.
+ </summary>
+ <param name="buildInfo"></param>
+ <returns>The generated password for this account. If the account was not created due to some error, then Nothing is returned</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountAlreadyExistsException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.CreateAdminAccount(OnlineViewingOfGrades.AdminAccount.Builder,System.String)">
+ <summary>
+ 
+ </summary>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.IfAdminAccountExists(System.String)">
+ <summary>
+ Checks whether the admin account associated with the given username exists
+ </summary>
+ <param name="username"></param>
+ <returns>True if the admin account with the given username exists, false otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.DeleteAdminAccount(System.String)">
+ <summary>
+ Deletes specified admin account. The deletion fails if the specified admin account is the default admin.
+ </summary>
+ <returns>True if the account was deleted, False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.DeleteAllAdminAccounts">
+ <summary>
+ Deletes all admin accounts, except for the default admin
+ </summary>
+ <returns>Number of deleted accounts</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.GetDefaultAdminUsername">
+ <summary>
+ 
+ </summary>
+ <returns>Returns the username of the default admin, or null if the admin does not exist</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.GetAllAdminAccounts">
+ <summary>
+ Gets all admin accounts, along with their information. This does not include the account's passwords
+ </summary>
+ <returns>A list of admin accounts containing their information</returns>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.GetAdminAccount(System.String)">
+ <summary>
+ Gets the admin account, along with its information. Does not include the account's password
+ </summary>
+ <param name="username"></param>
+ <returns>AdminAccount object, which includes its information</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.GetPrivilageModeOfAdminAccount(System.String)">
+ <summary>
+ Gets the <see cref="T:OnlineViewingOfGrades.PrivilageMode"/> of an admin account.
+ </summary>
+ <param name="username"></param>
+ <returns>The privilage mode of the admin account</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.IsPasswordOfAdminAccountEqualTo(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password. False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.ChangePasswordOfAdminAccount(System.String,System.String)">
+ <summary>
+ Changes the current password of the provided username with the provided password
+ <br /><br />
+ No privilage level is required when changing one's own password
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newPassword">The new password to use</param>
+ <returns>True if password of account was changed (even if the new password is equal to the old one). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.ChangePrivilageModeOfAdminAccount(System.String,OnlineViewingOfGrades.PrivilageMode)">
+ <summary>
+ Changes the privilage mode of an admin account to the provided privilage mode
+ </summary>
+ <param name="username">The account to change the privilage mode of</param>
+ <param name="newPrivilageMode">The new privilage mode. Cannot be <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/></param>
+ <returns>True if privilage mode of provided account was changed. False otherwise (
+ or if provided privilage mode was <see cref="F:OnlineViewingOfGrades.PrivilageMode.DEFAULT_ADMIN"/>)</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.IfAccountExists(System.String)">
+ <summary>
+ Checks for a student or admin account with the provided username.
+ </summary>
+ <param name="username"></param>
+ <returns>True if a student or admin account with the provided username exists. False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.GetPrivilageModeOfAccount(System.String)">
+ <summary>
+ Gets the <see cref="T:OnlineViewingOfGrades.PrivilageMode"/> of the account.
+ </summary>
+ <param name="username"></param>
+ <returns></returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.DeleteAccount(System.String)">
+ <summary>
+ Deletes the student or admin account with the provided username.
+ </summary>
+ <param name="username"></param>
+ <returns>True if the deletion procedure succeeded. False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.IsPasswordOfAccountEqualTo(System.String,System.String)">
+ <summary>
+ Checks if the student or admin account with the provided username has a password equal to the one provided
+ </summary>
+ <param name="username"></param>
+ <param name="password"></param>
+ <returns>True if the password provided is equal to the password of the account with the provided username. False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.ChangePasswordOfAccount(System.String,System.String)">
+ <summary>
+ Changes the password of the student or admin account with the provided username.
+ <br /><br />
+ No privilage level is required when changing one's own password
+ </summary>
+ <param name="username"></param>
+ <param name="newPassword"></param>
+ <returns>True if the password change procedure succeeded. False otherwise (and if account does not exist)</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="T:OnlineViewingOfGrades.StudentAccount">
+ <summary>
+ Represents an existing student account of the portal database. This does not contain the account's password
+ </summary>
+</member>
+<member name="M:OnlineViewingOfGrades.StudentAccount.Equals(System.Object)">
+ <summary>
+ Compares this object to the given parameter
+ </summary>
+ <param name="obj"></param>
+ <returns>True if the given object is a student account and has the same username. False otherwise</returns>
+</member>
+<member name="T:OnlineViewingOfGrades.StudentAccount.Builder">
+ <summary>
+ Represents a template for building student accounts. This may not represent an already existing student account.
+ </summary>
+</member>
+<member name="P:OnlineViewingOfGrades.SyncCreationOfStudentAccountsResults.CreatedAccounts">
+ <summary>
+ A collection of accounts with usernames as values, and passwords for keys.
+ </summary>
+ <returns></returns>
+</member>
+<member name="F:OnlineViewingOfGrades.OAuthCallback._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.TestSendEmailToTargetPage._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.TestSendEmailToTargetPage._EmailOfTargetLabel">
+<summary>
+EmailOfTargetLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.TestSendEmailToTargetPage._EmailOfTargetField">
+<summary>
+EmailOfTargetField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.TestSendEmailToTargetPage._SendButton">
+<summary>
+SendButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>
