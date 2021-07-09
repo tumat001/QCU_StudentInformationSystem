@@ -23,13 +23,13 @@ Partial Public Class StudentHomePage_GradesContent
     Protected WithEvents StudentNameLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''YearDropDownList control.
+    '''SemYearDropDownList control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents YearDropDownList As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents SemYearDropDownList As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''CampusLabel control.
@@ -68,11 +68,11 @@ Partial Public Class StudentHomePage_GradesContent
     Protected WithEvents StudentGradeInfoGridView As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''DownloadGradesButton control.
+    '''RequestGradeSlipButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DownloadGradesButton As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents RequestGradeSlipButton As Global.System.Web.UI.WebControls.Button
 End Class

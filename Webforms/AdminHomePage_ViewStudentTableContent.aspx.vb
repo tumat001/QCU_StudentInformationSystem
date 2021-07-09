@@ -13,9 +13,13 @@
 
     Private Shared ReadOnly FILTER_NAME As String = "FilterType_Name"
 
+    Private ReadOnly studentSource As IStudentSource = New MockStudentSource()
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         OnPageLoad_NonPostback()
         OnPageLoad_PostBack()
+
+        SetControlVisibilityBasedOnAdmin()
     End Sub
 
 #Region "RefeshStudentTable"
@@ -58,18 +62,22 @@
 
     Private Sub OnPageLoad_NonPostback()
         If Not IsPostBack Then
-            RegisterAllStudentsList()
-            RegisterSelectedStudentsInSession()
-            RegisterFilteredStudentsInSession()
-            RegisterFiltersAppliedList()
-
-            GetSelectedStudentUsernamesFromSession()
-            GetAllStudentFromSession()
-            GetFilteredStudentsFromSession()
-            GetFiltersAppliedFromSession()
-
-            DisplayStudentsToGridView()
+            FirstTimeDisplay()
         End If
+    End Sub
+
+    Private Sub FirstTimeDisplay()
+        RegisterAllStudentsList()
+        RegisterSelectedStudentsInSession()
+        RegisterFilteredStudentsInSession()
+        RegisterFiltersAppliedList()
+
+        GetSelectedStudentUsernamesFromSession()
+        GetAllStudentFromSession()
+        GetFilteredStudentsFromSession()
+        GetFiltersAppliedFromSession()
+
+        DisplayStudentsToGridView()
     End Sub
 
     Private Sub RegisterAllStudentsList()
@@ -132,6 +140,27 @@
             GetFilteredStudentsFromSession()
             GetFiltersAppliedFromSession()
         End If
+    End Sub
+
+#End Region
+
+#Region "Control Visibility (Based on privilage mode)"
+
+    Private Sub SetControlVisibilityBasedOnAdmin()
+
+        Dim privMode As PrivilageMode = PortalQueriesAndActions.AdminQueriesAndActions.GetPrivilageModeOfAdminAccount(Session.Item(SessionConstants.LOGGED_IN_USER))
+        If privMode Is PrivilageMode.DEFAULT_ADMIN Or privMode Is PrivilageMode.SUPER_ADMIN Or privMode Is PrivilageMode.NORMAL_ADMIN Then
+            CreateStudentButton.Visible = True
+            SyncAccountsButton.Visible = True
+            EditPropertiesButton.Visible = True
+            LabelIns02.Visible = True
+        Else
+            CreateStudentButton.Visible = False
+            SyncAccountsButton.Visible = False
+            EditPropertiesButton.Visible = False
+            LabelIns02.Visible = False
+        End If
+
     End Sub
 
 #End Region
@@ -263,31 +292,31 @@
 
 #End Region
 
-#Region "DeleteSelected"
+    '#Region "DeleteSelected"
 
-    Protected Sub DeleteSelectedButton_Click(sender As Object, e As EventArgs) Handles DeleteSelectedButton.Click
+    '    Protected Sub DeleteSelectedButton_Click(sender As Object, e As EventArgs) Handles DeleteSelectedButton.Click
 
-        UpdateSelectedStudentsBasedOnCurrentPageOfGridView()
+    '        UpdateSelectedStudentsBasedOnCurrentPageOfGridView()
 
-        Dim selfUsername As String = Session.Item(SessionConstants.LOGGED_IN_USER)
-        Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(selfUsername)
+    '        Dim selfUsername As String = Session.Item(SessionConstants.LOGGED_IN_USER)
+    '        Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(selfUsername)
 
-        For Each username As String In selectedStudentUsernameList
-            Try
-                actionsAsSelf.StudentAccountRelated.DeleteStudentAccount(username)
-            Catch ex As AccountDoesNotExistException
+    '        For Each username As String In selectedStudentUsernameList
+    '            Try
+    '                actionsAsSelf.StudentAccountRelated.DeleteStudentAccount(username)
+    '            Catch ex As AccountDoesNotExistException
 
-            End Try
-        Next
+    '            End Try
+    '        Next
 
-        selectedStudentUsernameList.Clear()
-        Session.Item(SELECTED_STUDENT_USERNAME_SESSION_CONSTANT) = selectedStudentUsernameList
+    '        selectedStudentUsernameList.Clear()
+    '        Session.Item(SELECTED_STUDENT_USERNAME_SESSION_CONSTANT) = selectedStudentUsernameList
 
-        RefreshAllStudentLists()
-        DisplayStudentsToGridView()
-    End Sub
+    '        RefreshAllStudentLists()
+    '        DisplayStudentsToGridView()
+    '    End Sub
 
-#End Region
+    '#End Region
 
 #Region "EditProperties"
 
@@ -302,6 +331,22 @@
 
     Protected Sub CreateStudentButton_Click(sender As Object, e As EventArgs) Handles CreateStudentButton.Click
         Response.RedirectPermanent(PageUrlConstants.ADMIN_ADD_STUDENT_ACCOUNT_PAGE_URL)
+    End Sub
+
+#End Region
+
+
+#Region "SyncRelated"
+
+    Protected Sub SyncAccountsButton_Click(sender As Object, e As EventArgs) Handles SyncAccountsButton.Click
+        Dim actionAsAdmin As PortalQueriesAndActions = New PortalQueriesAndActions(Session.Item(LOGGED_IN_USER))
+
+        Try
+            actionAsAdmin.StudentAccountRelated.SyncStudentAccountRelated.CreateAccountsForAccountlessStudents(studentSource)
+            FirstTimeDisplay()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 #End Region

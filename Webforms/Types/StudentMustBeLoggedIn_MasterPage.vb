@@ -13,8 +13,10 @@
     Protected MustOverride Sub OnPageLoad()
 
     Public Sub LogOut()
-        Session.Remove(SessionConstants.LOGGED_IN_USER)
-        Session.Remove(SessionConstants.REDIRECT_HOME_ADDRESS_OF_GENERIC_PAGE)
+        'Session.Remove(SessionConstants.LOGGED_IN_USER)
+        'Session.Remove(SessionConstants.REDIRECT_HOME_ADDRESS_OF_GENERIC_PAGE)
+        Session.RemoveAll()
+
         Response.RedirectPermanent(PageUrlConstants.LOG_IN_PAGE_URL)
     End Sub
 

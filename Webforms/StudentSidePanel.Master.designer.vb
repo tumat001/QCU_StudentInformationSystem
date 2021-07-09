@@ -41,6 +41,33 @@ Partial Public Class StudentSidePanel
     Protected WithEvents WelcomeLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''GradesButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GradesButton As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''EnrolledCourseButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EnrolledCourseButton As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''RequestDocuLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequestDocuLink As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''EditProfileButton control.
     '''</summary>
     '''<remarks>

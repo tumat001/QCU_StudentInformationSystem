@@ -95,15 +95,6 @@ Partial Public Class AdminHomePage_ViewStudentTableContent
     Protected WithEvents LabelIns02 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''DeleteSelectedButton control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents DeleteSelectedButton As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''EditPropertiesButton control.
     '''</summary>
     '''<remarks>

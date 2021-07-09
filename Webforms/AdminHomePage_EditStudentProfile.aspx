@@ -21,7 +21,7 @@
                 <br />
                 <asp:Label ID="ManualSetEmailLabel" runat="server" Text="Manual Set Email:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="ManualSetEmailField" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="ManualSetEmailField" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <br />
                 <asp:Label ID="ErrorInEmailLabel" runat="server" ForeColor="Red" Visible="False"></asp:Label>

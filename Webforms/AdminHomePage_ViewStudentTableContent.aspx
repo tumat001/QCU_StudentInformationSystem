@@ -42,10 +42,10 @@
         <asp:Label ID="LabelIns02" runat="server" Text="Perform Action to Selected:"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="DeleteSelectedButton" runat="server" Text="Delete" />
-
-    &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="EditPropertiesButton" runat="server" Text="Edit Properties" />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
 
     </div>
     

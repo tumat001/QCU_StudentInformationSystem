@@ -116,16 +116,16 @@
 
 #End Region
 
-    Protected Sub ShowPasswordCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckbox.CheckedChanged
-        Dim fieldMode As TextBoxMode = PasswordField.TextMode
+    'Protected Sub ShowPasswordCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckbox.CheckedChanged
+    '    Dim fieldMode As TextBoxMode = PasswordField.TextMode
 
-        If fieldMode = TextBoxMode.Password Then
-            PasswordField.TextMode = TextBoxMode.SingleLine
+    '    If fieldMode = TextBoxMode.Password Then
+    '        PasswordField.TextMode = TextBoxMode.SingleLine
 
-        ElseIf fieldMode = TextBoxMode.SingleLine Then
-            PasswordField.TextMode = TextBoxMode.Password
+    '    ElseIf fieldMode = TextBoxMode.SingleLine Then
+    '        PasswordField.TextMode = TextBoxMode.Password
 
-        End If
-    End Sub
+    '    End If
+    'End Sub
 
 End Class

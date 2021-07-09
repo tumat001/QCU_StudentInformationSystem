@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -52,6 +53,12 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.8.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.8.8\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
     </Reference>
@@ -100,6 +107,7 @@
     </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -141,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\768px-Windows_Settings_app_icon.png" />
+    <Compile Include="Codes\DataTypes\Course.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetAllRequestDocumentOptionsListQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\UpdateRequestDocumentListAction.vb" />
     <Compile Include="Webforms\AdminHomePage_AddAdminAccount.aspx.designer.vb">
       <DependentUpon>AdminHomePage_AddAdminAccount.aspx</DependentUpon>
     </Compile>
@@ -153,6 +164,13 @@
     </Compile>
     <Compile Include="Webforms\AdminHomePage_AddStudentAccount.aspx.vb">
       <DependentUpon>AdminHomePage_AddStudentAccount.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\AdminHomePage_BackupPage.aspx.designer.vb">
+      <DependentUpon>AdminHomePage_BackupPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\AdminHomePage_BackupPage.aspx.vb">
+      <DependentUpon>AdminHomePage_BackupPage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Webforms\AdminHomePage_EditAdminProfile.aspx.designer.vb">
@@ -181,6 +199,13 @@
     </Compile>
     <Compile Include="Webforms\AdminHomePage_NoSelectedContent.aspx.vb">
       <DependentUpon>AdminHomePage_NoSelectedContent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\AdminHomePage_RequestableDocumentEditPage.aspx.designer.vb">
+      <DependentUpon>AdminHomePage_RequestableDocumentEditPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\AdminHomePage_RequestableDocumentEditPage.aspx.vb">
+      <DependentUpon>AdminHomePage_RequestableDocumentEditPage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Webforms\AdminHomePage_ViewAdminTableContent.aspx.designer.vb">
@@ -218,11 +243,25 @@
       <DependentUpon>StudentHomePage_EditProfileContent.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Webforms\StudentHomePage_CoursesEnrolled.aspx.designer.vb">
+      <DependentUpon>StudentHomePage_CoursesEnrolled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\StudentHomePage_CoursesEnrolled.aspx.vb">
+      <DependentUpon>StudentHomePage_CoursesEnrolled.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Webforms\StudentHomePage_GradesContent.aspx.designer.vb">
       <DependentUpon>StudentHomePage_GradesContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Webforms\StudentHomePage_GradesContent.aspx.vb">
       <DependentUpon>StudentHomePage_GradesContent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Webforms\StudentHomePage_RequestDocument.aspx.designer.vb">
+      <DependentUpon>StudentHomePage_RequestDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webforms\StudentHomePage_RequestDocument.aspx.vb">
+      <DependentUpon>StudentHomePage_RequestDocument.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Webforms\StudentSidePanel.Master.designer.vb">
@@ -232,15 +271,20 @@
       <DependentUpon>StudentSidePanel.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Content Include="App_Data\PortalAccountDatabase.mdf" />
-    <Content Include="App_Data\PortalAccountDatabase_log.ldf">
-      <DependentUpon>PortalAccountDatabase.mdf</DependentUpon>
+    <Content Include="App_Data\master.mdf" />
+    <Content Include="App_Data\master_log.ldf">
+      <DependentUpon>master.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\MockDatabases\MockStudentDatabase.mdf" />
     <Content Include="App_Data\MockDatabases\MockStudentDatabase_log.ldf">
       <DependentUpon>MockStudentDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\QCUSIS_Database.mdf" />
+    <Content Include="App_Data\QCUSIS_Database_log.ldf">
+      <DependentUpon>QCUSIS_Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
+    <Content Include="images\WebpageBackgroundTile_Beige.png" />
     <Content Include="OAuthCallback.aspx" />
     <None Include="images\photo_backgrounds_textures_app05.jpg" />
     <None Include="images\pngtree-vector-folder-icon-png-image_555493.jpg" />
@@ -263,80 +307,83 @@
     <Content Include="copyFrom\Site1.Master.designer.cs" />
     <Content Include="Webforms\AdminHomePage_AddAdminAccount.aspx" />
     <Content Include="Webforms\AdminHomePage_AddStudentAccount.aspx" />
+    <Content Include="Webforms\AdminHomePage_BackupPage.aspx" />
     <Content Include="Webforms\AdminHomePage_EditAdminProfile.aspx" />
     <Content Include="Webforms\AdminHomePage_EditSelfProfileContent.aspx" />
     <Content Include="Webforms\AdminHomePage_EditStudentProfile.aspx" />
     <Content Include="Webforms\AdminHomePage_NoSelectedContent.aspx" />
+    <Content Include="Webforms\AdminHomePage_RequestableDocumentEditPage.aspx" />
     <Content Include="Webforms\AdminHomePage_ViewAdminTableContent.aspx" />
     <Content Include="Webforms\AdminHomePage_ViewStudentTableContent.aspx" />
     <Content Include="Webforms\LogInPage.aspx" />
     <Content Include="Webforms\StudentHomePage_EditProfileContent.aspx" />
+    <Content Include="Webforms\StudentHomePage_CoursesEnrolled.aspx" />
     <Content Include="Webforms\StudentHomePage_GradesContent.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\PortalRelated\AccountsAndProperties\BaseAccount.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\ChangeEmailAddressOfAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\CreateStudentAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\DeleteAdminAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\DeleteStudentAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\StudentSyncActions\CreateAccountsForAccountlessStudentsAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\StudentSyncActions\DeleteStudentAccountsNotInSourceAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\BasePortalQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\GetAccountQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\GetAccountUsernameQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\GetDefaultAdminUsernameQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\GetPrivilageModeOfAccountQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\IfAccountExistsQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\IsPasswordOfAccountEqualQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\StudentSyncQuery\PeekAccountlessStudentsQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Queries\StudentSyncQuery\PeekStudentAccountsNotInSourceQuery.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\IHashValueComparator.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\Implementations\BCryptHashValueComparator.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\Implementations\BCryptSaltGenerator.vb" />
-    <Compile Include="App_Code\PortalRelated\InputConstraintsRelated\EmailAddressConstraint.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Exceptions\AccountAlreadyExistsException.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Exceptions\AccountDoesNotExistException.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Exceptions\PrivilageLevelNotMetException.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\BasePortalAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\ChangePasswordOfOtherAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\ChangePasswordOfOwnAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\ChangePrivilageModeOfAdminAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\Actions\CreateAdminAccountAction.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\Implementations\BCryptHasher.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\IHasher.vb" />
-    <Compile Include="App_Code\PortalRelated\HashingRelated\ISaltGenerator.vb" />
-    <Compile Include="App_Code\PortalRelated\PortalNormalizer.vb" />
-    <Compile Include="App_Code\PortalRelated\EmailRelated\EmailSenders\BaseEmailSender.vb" />
-    <Compile Include="App_Code\PortalRelated\EmailRelated\EmailTemplates\DefaultPasswordEmailTemplate.vb" />
-    <Compile Include="App_Code\PortalRelated\EmailRelated\EmailTemplates\BaseEmail.vb" />
-    <Compile Include="App_Code\PortalRelated\InputConstraintsRelated\StringConstraints\IStringConstraints.vb" />
-    <Compile Include="App_Code\PortalRelated\InputConstraintsRelated\StringConstraints\StringConstraints.vb" />
-    <Compile Include="App_Code\PortalRelated\InputConstraintsRelated\StringConstraints\StringConstraintsViolatedException.vb" />
+    <Compile Include="Codes\PortalRelated\AccountsAndProperties\BaseAccount.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\ChangeEmailAddressOfAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\CreateStudentAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\DeleteAdminAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\DeleteStudentAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\StudentSyncActions\CreateAccountsForAccountlessStudentsAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\StudentSyncActions\DeleteStudentAccountsNotInSourceAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\BasePortalQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetAccountQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetAccountUsernameQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetDefaultAdminUsernameQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetPrivilageModeOfAccountQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\IfAccountExistsQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\IsPasswordOfAccountEqualQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\StudentSyncQuery\PeekAccountlessStudentsQuery.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\StudentSyncQuery\PeekStudentAccountsNotInSourceQuery.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\IHashValueComparator.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\Implementations\BCryptHashValueComparator.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\Implementations\BCryptSaltGenerator.vb" />
+    <Compile Include="Codes\PortalRelated\InputConstraintsRelated\EmailAddressConstraint.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Exceptions\AccountAlreadyExistsException.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Exceptions\AccountDoesNotExistException.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Exceptions\PrivilageLevelNotMetException.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\BasePortalAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\ChangePasswordOfOtherAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\ChangePasswordOfOwnAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\ChangePrivilageModeOfAdminAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\CreateAdminAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\Implementations\BCryptHasher.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\IHasher.vb" />
+    <Compile Include="Codes\PortalRelated\HashingRelated\ISaltGenerator.vb" />
+    <Compile Include="Codes\PortalRelated\PortalNormalizer.vb" />
+    <Compile Include="Codes\PortalRelated\EmailRelated\EmailSenders\BaseEmailSender.vb" />
+    <Compile Include="Codes\PortalRelated\EmailRelated\EmailTemplates\DefaultPasswordEmailTemplate.vb" />
+    <Compile Include="Codes\PortalRelated\EmailRelated\EmailTemplates\BaseEmail.vb" />
+    <Compile Include="Codes\PortalRelated\InputConstraintsRelated\StringConstraints\IStringConstraints.vb" />
+    <Compile Include="Codes\PortalRelated\InputConstraintsRelated\StringConstraints\StringConstraints.vb" />
+    <Compile Include="Codes\PortalRelated\InputConstraintsRelated\StringConstraints\StringConstraintsViolatedException.vb" />
     <Compile Include="Webforms\Types\AdminMustBeLoggedIn_MasterPage.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\DataSources\IStudentSource.vb" />
-    <Compile Include="App_Code\DataSources\IGradeSource.vb" />
-    <Compile Include="App_Code\DataTypes\Student.vb" />
-    <Compile Include="App_Code\DataTypes\SemesterGrades.vb" />
-    <Compile Include="App_Code\DataTypes\SubjectGrade.vb" />
-    <Compile Include="App_Code\Mocks\MockGradeSource.vb" />
-    <Compile Include="App_Code\Mocks\MockRandomPasswordGenerator.vb" />
-    <Compile Include="App_Code\Mocks\MockStudentSource.vb" />
+    <Compile Include="Codes\DataSources\IStudentSource.vb" />
+    <Compile Include="Codes\DataSources\IGradeSource.vb" />
+    <Compile Include="Codes\DataTypes\Student.vb" />
+    <Compile Include="Codes\DataTypes\SemesterGrades.vb" />
+    <Compile Include="Codes\DataTypes\SubjectGrade.vb" />
+    <Compile Include="Codes\Mocks\MockGradeSource.vb" />
+    <Compile Include="Codes\Mocks\MockRandomPasswordGenerator.vb" />
+    <Compile Include="Codes\Mocks\MockStudentSource.vb" />
     <Compile Include="Webforms\Types\AnyMustBeLoggedInPage.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\PortalRelated\InputConstraintsRelated\UsernamePasswordConstraint.vb" />
+    <Compile Include="Codes\PortalRelated\InputConstraintsRelated\UsernamePasswordConstraint.vb" />
     <Compile Include="Webforms\Constants\PageUrlConstants.vb" />
     <Compile Include="Webforms\Types\StudentMustBeLoggedIn_MasterPage.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\PortalRelated\AccountsAndProperties\AdminAccount.vb" />
-    <Compile Include="App_Code\PortalRelated\AccountsAndProperties\PrivilageMode.vb" />
-    <Compile Include="App_Code\PortalRelated\PortalQueriesAndActions.vb" />
-    <Compile Include="App_Code\PortalRelated\PasswordGenerationRelated\IRandomPasswordGenerator.vb" />
-    <Compile Include="App_Code\PortalRelated\AccountsAndProperties\StudentAccount.vb" />
-    <Compile Include="App_Code\PortalRelated\ActionsAndQueryRelated\SyncCreationOfStudentAccountsResults.vb" />
+    <Compile Include="Codes\PortalRelated\AccountsAndProperties\AdminAccount.vb" />
+    <Compile Include="Codes\PortalRelated\AccountsAndProperties\PrivilageMode.vb" />
+    <Compile Include="Codes\PortalRelated\PortalQueriesAndActions.vb" />
+    <Compile Include="Codes\PortalRelated\PasswordGenerationRelated\IRandomPasswordGenerator.vb" />
+    <Compile Include="Codes\PortalRelated\AccountsAndProperties\StudentAccount.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\SyncCreationOfStudentAccountsResults.vb" />
     <Compile Include="Webforms\Constants\SessionConstants.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -405,9 +452,12 @@
     </None>
     <Content Include="copyFrom\Site1.Master" />
     <Content Include="Webforms\AdminSidePanel.Master" />
+    <Content Include="Webforms\StudentHomePage_RequestDocument.aspx" />
     <Content Include="Webforms\StudentSidePanel.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -450,7 +500,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

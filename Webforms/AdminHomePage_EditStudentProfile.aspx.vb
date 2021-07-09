@@ -52,7 +52,9 @@
             Return
         End If
 
-        For Each username As String In SelectedAccountsListBox.Items
+        For Each usernameItem As ListItem In SelectedAccountsListBox.Items
+            Dim username As String = usernameItem.ToString()
+
             Try
                 Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(Session.Item(SessionConstants.LOGGED_IN_USER))
 

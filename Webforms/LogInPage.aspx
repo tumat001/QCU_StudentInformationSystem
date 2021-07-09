@@ -15,7 +15,7 @@
         .navbar{
             flex-wrap: wrap;        
             width:auto;  
-            background-color: dimgray;
+            background-color: saddlebrown;
             text-align:center;
             opacity:0.8;
         }
@@ -65,7 +65,7 @@
     <form id="form1" runat="server">
 
         <div class="navbar">
-            <div ><br /><h1>Online Viewing of Grades</h1>
+            <div ><br /><h1>QCU Student Information System</h1>
 
             </div>
         </div>
@@ -89,8 +89,7 @@
                         </tr>
                         <tr>
                             <td></td><td>
-                                &nbsp;<asp:CheckBox ID="ShowPasswordCheckbox" runat="server" Text="Show Password" />
-                            </td>
+                                &nbsp;</td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>

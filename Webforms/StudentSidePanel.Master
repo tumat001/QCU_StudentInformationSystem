@@ -7,6 +7,7 @@
     <title></title>
     <style>
         body{
+
             background-image:url("../images/photo_backgrounds_textures_app05.jpg");
             background-size:100%;
             background-repeat: no-repeat;
@@ -15,7 +16,7 @@
         .navbar{
             flex-wrap: wrap;        
             width:auto;  
-            background-color: dimgray;
+            background-color: saddlebrown;
             text-align:center;
             opacity:0.8;
         }
@@ -68,7 +69,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar">
-            <div ><br /><h1>Online Viewing of Grades</h1>
+            <div ><br /><h1>QCU Student Information System</h1>
 
             </div>
         </div>
@@ -85,6 +86,19 @@
             <tr>                 
                 <td colspan="1" class="auto-style4">                    
                     <div>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            <asp:LinkButton ID="GradesButton" runat="server" Width="91px">View Grades</asp:LinkButton>
+                        </p>
+                        <p>
+                            <asp:LinkButton ID="EnrolledCourseButton" runat="server" Width="91px">View Enrolled Courses</asp:LinkButton>
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                        <p>
+                            <asp:LinkButton ID="RequestDocuLink" runat="server">Request Document</asp:LinkButton>
+                        </p>
                         <p>
                             <br />
                         </p>

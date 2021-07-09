@@ -5,7 +5,6 @@
         Dim loggedInUser As String = Session.Item(SessionConstants.LOGGED_IN_USER)
         If loggedInUser Is Nothing OrElse Not PortalQueriesAndActions.AdminQueriesAndActions.IfAdminAccountExists(loggedInUser) Then
             LogOut()
-            Return
         End If
 
         OnPageLoad()

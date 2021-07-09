@@ -16,6 +16,8 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         OnPageLoad_NonPostback()
         OnPageLoad_PostBack()
+
+        SetControlVisibilityBasedOnAdmin()
     End Sub
 
 #Region "RefeshAdminTable"
@@ -132,6 +134,25 @@
             GetFilteredAdminsFromSession()
             GetFiltersAppliedFromSession()
         End If
+    End Sub
+
+#End Region
+
+#Region "Control Visibility (Based on privilage mode)"
+
+    Private Sub SetControlVisibilityBasedOnAdmin()
+
+        Dim privMode As PrivilageMode = PortalQueriesAndActions.AdminQueriesAndActions.GetPrivilageModeOfAdminAccount(Session.Item(SessionConstants.LOGGED_IN_USER))
+        If privMode Is PrivilageMode.DEFAULT_ADMIN Or privMode Is PrivilageMode.SUPER_ADMIN Then
+            CreateAdminButton.Visible = True
+            EditPropertiesButton.Visible = True
+            Label2.Visible = True
+        Else
+            CreateAdminButton.Visible = False
+            EditPropertiesButton.Visible = False
+            Label2.Visible = False
+        End If
+
     End Sub
 
 #End Region
@@ -263,31 +284,31 @@
 
 #End Region
 
-#Region "DeleteSelected"
+    '#Region "DeleteSelected"
 
-    Protected Sub DeleteSelectedButton_Click(sender As Object, e As EventArgs) Handles DeleteSelectedButton.Click
+    'Protected Sub DeleteSelectedButton_Click(sender As Object, e As EventArgs) Handles DeleteSelectedButton.Click
 
-        UpdateSelectedAdminsBasedOnCurrentPageOfGridView()
+    '    UpdateSelectedAdminsBasedOnCurrentPageOfGridView()
 
-        Dim selfUsername As String = Session.Item(SessionConstants.LOGGED_IN_USER)
-        Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(selfUsername)
+    '    Dim selfUsername As String = Session.Item(SessionConstants.LOGGED_IN_USER)
+    '    Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(selfUsername)
 
-        For Each username As String In selectedAdminUsernameList
-            Try
-                actionsAsSelf.AdminAccountRelated.DeleteAdminAccount(username)
-            Catch ex As AccountDoesNotExistException
+    '    For Each username As String In selectedAdminUsernameList
+    '        Try
+    '            actionsAsSelf.AdminAccountRelated.DeleteAdminAccount(username)
+    '        Catch ex As AccountDoesNotExistException
 
-            End Try
-        Next
+    '        End Try
+    '    Next
 
-        selectedAdminUsernameList.Clear()
-        Session.Item(SELECTED_ADMINS_USERNAME_SESSION_CONSTANT) = selectedAdminUsernameList
+    '    selectedAdminUsernameList.Clear()
+    '    Session.Item(SELECTED_ADMINS_USERNAME_SESSION_CONSTANT) = selectedAdminUsernameList
 
-        RefreshAllAdminsList()
-        DisplayAdminsToGridView()
-    End Sub
+    '    RefreshAllAdminsList()
+    '    DisplayAdminsToGridView()
+    'End Sub
 
-#End Region
+    '#End Region
 
 #Region "EditSelected"
 

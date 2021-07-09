@@ -17,7 +17,7 @@
                         </td>
                         <td>&nbsp</td>
                         <td>
-                            <asp:DropDownList ID="YearDropDownList" runat="server">
+                            <asp:DropDownList ID="SemYearDropDownList" runat="server" AutoPostBack="True">
                             </asp:DropDownList>
                         </td>
                     <tr>
@@ -67,7 +67,8 @@
                 </div>
                 <br />
                 <br />
-                <asp:LinkButton ID="DownloadGradesButton" runat="server">Download grades as image</asp:LinkButton>
+                <asp:Button ID="RequestGradeSlipButton" runat="server" Text="Request Grade Slip" />
+                <br />
             <br /></td>
         </tr>
     </table>

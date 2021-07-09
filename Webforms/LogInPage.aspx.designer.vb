@@ -59,15 +59,6 @@ Partial Public Class LogInPage
     Protected WithEvents RequiredPasswordValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''ShowPasswordCheckbox control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ShowPasswordCheckbox As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
     '''IncorrectInputLabel control.
     '''</summary>
     '''<remarks>

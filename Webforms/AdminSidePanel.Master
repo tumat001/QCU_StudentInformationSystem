@@ -15,7 +15,7 @@
         .navbar{
             flex-wrap: wrap;        
             width:auto;  
-            background-color: dimgray;
+            background-color: saddlebrown;
             text-align:center;
             opacity:0.8;
         }
@@ -76,7 +76,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar">
-            <div ><br /><h1>Online Viewing of Grades</h1>
+            <div ><br /><h1>QCU Student Information System</h1>
 
             </div>
         </div>
@@ -93,15 +93,7 @@
         </tr>
         <tr>
             <td class="auto-style2">
-               <h4>COURSES</h4>
-               <ul>
-                   <li> <asp:LinkButton ID="LinkButton1" runat="server">Information Technology</asp:LinkButton> </li>
-                   <li> <asp:LinkButton ID="LinkButton2" runat="server">Industrial Engineering</asp:LinkButton></li>
-                   <li> <asp:LinkButton ID="LinkButton3" runat="server">Accounting</asp:LinkButton> </li>
-                   <li> <asp:LinkButton ID="LinkButton4" runat="server">Electronics Engineering</asp:LinkButton>  </li>
-               </ul>
-
-
+               
             </td>
             <td rowspan="4" class="auto-style1" >
                 <div>
@@ -117,6 +109,15 @@
                     <li>  <asp:LinkButton ID="ViewAdminTableButton" runat="server">View Admin Accounts Table</asp:LinkButton> </li>
                     <li> <asp:LinkButton ID="ViewStudentTableButton" runat="server">View Student Accounts Table</asp:LinkButton> </li>
                 </ul>
+                <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="ViewBackupPageButton" runat="server">View Backup Page</asp:LinkButton>
+                </p>
+                <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:LinkButton ID="ChangeRequestableDocumentsButton" runat="server">Change Requestable Documents</asp:LinkButton>
+                </p>
+                &nbsp;<p>
+                    &nbsp;</p>
             </td>
         </tr>
         <tr>

@@ -9,18 +9,18 @@ Public Class StudentHomePage_GradesContent
 
     Private schoolYear As String
     Private semesterTerm As Integer
+    Private allSemYearList As IReadOnlyList(Of String)
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        InitializeGradeSource()
+        InitializeStudentSource()
+
+        InitializeSchoolYearAndSemesterTerm()
+        GetGradesFromStudent()
+
         OnPostBack()
         OnNonPostBack()
 
-        InitializeSchoolYearAndSemesterTerm()
-        InitializeGradeSource()
-        GetGradesFromStudent()
-        DisplayGrades()
-
-        InitializeStudentSource()
-        DisplayStudentInformation()
     End Sub
 
 #Region "OnPostBack"
@@ -37,56 +37,90 @@ Public Class StudentHomePage_GradesContent
 
     Private Sub OnNonPostBack()
         If Not IsPostBack Then
+            DisplaySemYearSelection()
+            DisplayGrades()
 
+            DisplayStudentInformation()
         End If
     End Sub
 
 #End Region
 
-#Region "DisplayGradesRelated"
-
-    Private Sub InitializeSchoolYearAndSemesterTerm()
-        schoolYear = "2020-2021"
-        semesterTerm = 1
-    End Sub
+#Region "DisplayGradesAndSemYearSelection Related"
 
     Private Sub InitializeGradeSource()
         'TODO Make this non-mock once readyy uwu ~~
         gradeSource = New MockGradeSource()
     End Sub
 
+    Private Sub InitializeSchoolYearAndSemesterTerm()
+        allSemYearList = gradeSource.GetAllSemYearCourseWithStudent(Session.Item(SessionConstants.LOGGED_IN_USER))
+
+        If Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY) = Nothing Then
+            If Not allSemYearList.Count = 0 Then
+                Dim semYear As String() = gradeSource.ConvertSemYearCourseStringToSemAndYearArray(allSemYearList.Item(0))
+
+                Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY) = semYear(0)
+                Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY) = semYear(1)
+
+                semesterTerm = semYear(0)
+                schoolYear = semYear(1)
+
+            End If
+        Else
+
+            semesterTerm = Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY)
+            schoolYear = Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY)
+
+        End If
+    End Sub
+
     Private Sub GetGradesFromStudent()
         Dim studentNumber As String = Session.Item(SessionConstants.LOGGED_IN_USER)
 
-        gradesOfStudent = gradeSource.GetLatestSchoolYearGradesOfStudent(studentNumber, semesterTerm)
+        gradesOfStudent = gradeSource.GetGradesOfStudentInSemYear(studentNumber, semesterTerm, schoolYear)
     End Sub
 
     Private Sub DisplayGrades()
-        Dim gradesTable As DataTable = New DataTable()
-        gradesTable.Columns.Add("SubCode", "".GetType)
-        gradesTable.Columns.Add("Description", "".GetType)
-        gradesTable.Columns.Add("Units", "".GetType)
-        gradesTable.Columns.Add("Grade", "".GetType)
-        gradesTable.Columns.Add("Remarks", "".GetType)
-        gradesTable.Columns.Add("Professor", "".GetType)
-        gradesTable.Columns.Add("Class", "".GetType)
+        If Not gradesOfStudent Is Nothing Then
+            Dim gradesTable As DataTable = New DataTable()
+            gradesTable.Columns.Add("SubCode", "".GetType)
+            gradesTable.Columns.Add("Description", "".GetType)
+            gradesTable.Columns.Add("Units", "".GetType)
+            gradesTable.Columns.Add("Grade", "".GetType)
+            gradesTable.Columns.Add("Remarks", "".GetType)
+            gradesTable.Columns.Add("Professor", "".GetType)
+            gradesTable.Columns.Add("Class", "".GetType)
 
-        For Each subjectGrade As SubjectGrade In gradesOfStudent.Grades
-            Dim subjectGradeRow As DataRow = gradesTable.NewRow()
+            For Each subjectGrade As SubjectGrade In gradesOfStudent.Grades
+                Dim subjectGradeRow As DataRow = gradesTable.NewRow()
 
-            subjectGradeRow.Item("SubCode") = subjectGrade.Code
-            subjectGradeRow.Item("Description") = subjectGrade.Description
-            subjectGradeRow.Item("Units") = subjectGrade.Units.ToString
-            subjectGradeRow.Item("Grade") = subjectGrade.Grade
-            subjectGradeRow.Item("Remarks") = subjectGrade.Remarks
-            subjectGradeRow.Item("Professor") = subjectGrade.Professor
-            subjectGradeRow.Item("Class") = subjectGrade.Class
+                subjectGradeRow.Item("SubCode") = subjectGrade.Code
+                subjectGradeRow.Item("Description") = subjectGrade.Description
+                subjectGradeRow.Item("Units") = subjectGrade.Units.ToString
+                subjectGradeRow.Item("Grade") = subjectGrade.Grade
+                subjectGradeRow.Item("Remarks") = subjectGrade.Remarks
+                subjectGradeRow.Item("Professor") = subjectGrade.Professor
+                subjectGradeRow.Item("Class") = subjectGrade.Class
 
-            gradesTable.Rows.Add(subjectGradeRow)
+                gradesTable.Rows.Add(subjectGradeRow)
+            Next
+
+            StudentGradeInfoGridView.DataSource = gradesTable
+            StudentGradeInfoGridView.DataBind()
+        End If
+    End Sub
+
+    Private Sub DisplaySemYearSelection()
+        SemYearDropDownList.Items.Clear()
+
+        For Each semYear As String In allSemYearList
+            SemYearDropDownList.Items.Add(New ListItem(semYear, semYear))
         Next
 
-        StudentGradeInfoGridView.DataSource = gradesTable
-        StudentGradeInfoGridView.DataBind()
+        If Not Session.Item(SessionConstants.SEM_YEAR_DROPDOWN_SELECTED_INDEX) = Nothing Then
+            SemYearDropDownList.SelectedIndex = Session.Item(SessionConstants.SEM_YEAR_DROPDOWN_SELECTED_INDEX)
+        End If
     End Sub
 
 #End Region
@@ -99,14 +133,15 @@ Public Class StudentHomePage_GradesContent
     End Sub
 
     Private Sub DisplayStudentInformation()
-
         Dim studentNumber As String = Session.Item(SessionConstants.LOGGED_IN_USER)
         Dim student As Student = studentSource.GetStudent(studentNumber)
 
-        StudentNameLabel.Text = GetNameOfStudent(student)
-        CampusLabel.Text = student.Campus
-        SchoolYearLabel.Text = schoolYear
-        TermLabel.Text = semesterTerm.ToString()
+        If Not student Is Nothing Then
+            StudentNameLabel.Text = GetNameOfStudent(student)
+            CampusLabel.Text = student.Campus
+            SchoolYearLabel.Text = schoolYear.ToString()
+            TermLabel.Text = semesterTerm.ToString()
+        End If
     End Sub
 
     Private Function GetNameOfStudent(student As Student) As String
@@ -129,5 +164,33 @@ Public Class StudentHomePage_GradesContent
     End Function
 
 #End Region
+
+
+#Region "SemYear Related"
+
+    Protected Sub YearDropDownList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SemYearDropDownList.SelectedIndexChanged
+        Dim selectedSemYear As String() = gradeSource.ConvertSemYearCourseStringToSemAndYearArray(SemYearDropDownList.SelectedValue)
+
+        Session.Item(SessionConstants.SEM_YEAR_DROPDOWN_SELECTED_INDEX) = SemYearDropDownList.SelectedIndex
+        Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY) = selectedSemYear(0)
+        Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY) = selectedSemYear(1)
+
+        semesterTerm = Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY)
+        schoolYear = Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY)
+
+        GetGradesFromStudent()
+
+        DisplayGrades()
+        DisplayStudentInformation()
+        'DisplaySemYearSelection()
+
+
+    End Sub
+
+#End Region
+
+    Protected Sub RequestGradeSlipButton_Click(sender As Object, e As EventArgs) Handles RequestGradeSlipButton.Click
+        Response.RedirectPermanent(PageUrlConstants.STUDENT_REQUEST_DOCUMENT_PAGE_URL)
+    End Sub
 
 End Class

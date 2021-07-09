@@ -37,6 +37,14 @@ OnlineViewingOfGrades
  Returns the Asp log object.
  </summary>
 </member>
+<member name="M:OnlineViewingOfGrades.UpdateRequestDocumentListAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAdminAccountAction"/> that allows the provided executor to create accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._LabelTitle">
 <summary>
 LabelTitle control.
@@ -319,6 +327,33 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._AddStudentButton">
 <summary>
 AddStudentButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_BackupPage._LabelBackup">
+<summary>
+LabelBackup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_BackupPage._CreateBackupButton">
+<summary>
+CreateBackupButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_BackupPage._LoadBackupButton">
+<summary>
+LoadBackupButton control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -748,6 +783,105 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._LabelTitle">
+<summary>
+LabelTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._ReqDocumentListBox">
+<summary>
+ReqDocumentListBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._AddDocumentLabel">
+<summary>
+AddDocumentLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._AddDocumentField">
+<summary>
+AddDocumentField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._AddDocumentButton">
+<summary>
+AddDocumentButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._UpdateSelectedDocumentField">
+<summary>
+UpdateSelectedDocumentField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._UpdateSelectedDocumentButton">
+<summary>
+UpdateSelectedDocumentButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._DeleteSelectedDocument">
+<summary>
+DeleteSelectedDocument control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._FinalizeChangesButton">
+<summary>
+FinalizeChangesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_RequestableDocumentEditPage._CancelButton">
+<summary>
+CancelButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._Label1">
 <summary>
 Label1 control.
@@ -823,15 +957,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._Label2">
 <summary>
 Label2 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewAdminTableContent._DeleteSelectedButton">
-<summary>
-DeleteSelectedButton control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -928,15 +1053,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._DeleteSelectedButton">
-<summary>
-DeleteSelectedButton control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_ViewStudentTableContent._EditPropertiesButton">
 <summary>
 EditPropertiesButton control.
@@ -973,42 +1089,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton1">
-<summary>
-LinkButton1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton2">
-<summary>
-LinkButton2 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton3">
-<summary>
-LinkButton3 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminSidePanel._LinkButton4">
-<summary>
-LinkButton4 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:OnlineViewingOfGrades.AdminSidePanel._AdminControlPlaceHolder">
 <summary>
 AdminControlPlaceHolder control.
@@ -1030,6 +1110,24 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminSidePanel._ViewStudentTableButton">
 <summary>
 ViewStudentTableButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._ViewBackupPageButton">
+<summary>
+ViewBackupPageButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminSidePanel._ChangeRequestableDocumentsButton">
+<summary>
+ChangeRequestableDocumentsButton control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1093,15 +1191,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.LogInPage._RequiredPasswordValidator">
 <summary>
 RequiredPasswordValidator control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.LogInPage._ShowPasswordCheckbox">
-<summary>
-ShowPasswordCheckbox control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1261,6 +1350,24 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_CoursesEnrolled._StudentNameLabel">
+<summary>
+StudentNameLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_CoursesEnrolled._StudentCoursesGridView">
+<summary>
+StudentCoursesGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._StudentNameLabel">
 <summary>
 StudentNameLabel control.
@@ -1270,9 +1377,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._YearDropDownList">
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._SemYearDropDownList">
 <summary>
-YearDropDownList control.
+SemYearDropDownList control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1315,9 +1422,90 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._DownloadGradesButton">
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._RequestGradeSlipButton">
 <summary>
-DownloadGradesButton control.
+RequestGradeSlipButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._LabelTitle01">
+<summary>
+LabelTitle01 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._LabelDocument">
+<summary>
+LabelDocument control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._DocumentDropDownList">
+<summary>
+DocumentDropDownList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._EmailLabel">
+<summary>
+EmailLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._EmailTextbox">
+<summary>
+EmailTextbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._PurposeLabel">
+<summary>
+PurposeLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._TextBox1">
+<summary>
+TextBox1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._SendRequestButton">
+<summary>
+SendRequestButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_RequestGradeSlip._LabelResultStatus">
+<summary>
+LabelResultStatus control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1345,6 +1533,33 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.StudentSidePanel._WelcomeLabel">
 <summary>
 WelcomeLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._GradesButton">
+<summary>
+GradesButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._EnrolledCourseButton">
+<summary>
+EnrolledCourseButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentSidePanel._RequestDocuLink">
+<summary>
+RequestDocuLink control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -2122,6 +2337,14 @@ To modify move field declaration from designer file to code-behind file.
  <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
  <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
 </member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.AdminQueriesAndActions.UpdateRequestDocumentsList(System.Collections.Generic.IList{System.String})">
+ <summary>
+ Changes the list of requestable documents (found in student's side - request document page)
+ </summary>
+ <param name="newList"></param>
+ <returns></returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
 <member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.IfAccountExists(System.String)">
  <summary>
  Checks for a student or admin account with the provided username.
@@ -2169,6 +2392,21 @@ To modify move field declaration from designer file to code-behind file.
  <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
  <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
  <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.PromptCreateDatabaseBackup">
+ <summary>
+ Prompts the user to select a location to save the would be created backup database.<br></br>
+ This then creates a database when the prompt is finished
+ </summary>
+ <returns>True if the database backup was sucessfully created.</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.PromptLoadDatabaseBackup">
+ <summary>
+ Prompts the user to select a file that will be loaded as the backup.
+ </summary>
+ <returns>True if the database backup was sucessfully loaded.</returns>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
 </member>
 <member name="T:OnlineViewingOfGrades.StudentAccount">
  <summary>
