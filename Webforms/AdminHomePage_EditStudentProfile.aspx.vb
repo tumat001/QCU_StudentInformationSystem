@@ -15,6 +15,7 @@
         If Not IsPostBack Then
             NoChangePasswordRadioButton.Checked = True
             NoChangeEmailRadioButton.Checked = True
+            NoChangeDisabledStateRadioButton.Checked = True
         End If
     End Sub
 #End Region
@@ -44,7 +45,7 @@
     Protected Sub ConfirmChangesButton_Click(sender As Object, e As EventArgs) Handles ConfirmChangesButton.Click
         EditSelectedStudents()
 
-        Response.Redirect(PageUrlConstants.ADMIN_VIEW_STUDENT_TABLE_PAGE_URL)
+        'Response.Redirect(PageUrlConstants.ADMIN_VIEW_STUDENT_TABLE_PAGE_URL)
     End Sub
 
     Private Sub EditSelectedStudents()
@@ -52,29 +53,69 @@
             Return
         End If
 
+        Dim errorsWithUsers As IList(Of String) = New List(Of String)
         For Each usernameItem As ListItem In SelectedAccountsListBox.Items
             Dim username As String = usernameItem.ToString()
 
+            Dim success As Boolean = False
             Try
                 Dim actionsAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(Session.Item(SessionConstants.LOGGED_IN_USER))
 
-                EditStudentEmail(actionsAsSelf, username)
-                EditStudentPassword(actionsAsSelf, username)
-            Catch ex As AccountDoesNotExistException
 
+                success = EditStudentEmail(actionsAsSelf, username) And EditStudentPassword(actionsAsSelf, username) And EditStudentEnabledState(actionsAsSelf, username)
+            Catch ex As AccountDoesNotExistException
+                success = False
             End Try
+
+            If Not success Then
+                errorsWithUsers.Add(username)
+            End If
         Next
 
-    End Sub
+        If errorsWithUsers.Count = 0 Then
+            SuccessLabel.Visible = True
+            ErrorInEdits.Visible = False
+        Else
+            SuccessLabel.Visible = False
+            ErrorInEdits.Visible = True
 
-    Private Sub EditStudentEmail(actionsAsSelf As PortalQueriesAndActions, targetUsername As String)
-        If SetManuallyEmailRadioButton.Checked Then
-            Dim newEmail As String = ManualSetEmailField.Text
-            actionsAsSelf.StudentAccountRelated.ChangeEmailAddressOfStudentAccount(targetUsername, newEmail)
+            Dim builder As StringBuilder = New StringBuilder()
+            builder.Append("Error in editing users: ")
+            For Each username As String In errorsWithUsers
+                builder.Append(username & ", ")
+            Next
+
+            ShowErrorMessage(builder.ToString())
         End If
+
     End Sub
 
-    Private Sub EditStudentPassword(actionsAsSelf As PortalQueriesAndActions, targetUsername As String)
+    Private Sub ShowErrorMessage(text As String)
+        ErrorInEdits.Visible = True
+        ErrorInEdits.Text = text
+
+        SuccessLabel.Visible = False
+    End Sub
+
+
+    Private Function EditStudentEmail(actionsAsSelf As PortalQueriesAndActions, targetUsername As String) As Boolean
+        Dim success As Boolean
+
+        Try
+            If SetManuallyEmailRadioButton.Checked Then
+                Dim newEmail As String = ManualSetEmailField.Text
+                success = actionsAsSelf.StudentAccountRelated.ChangeEmailAddressOfStudentAccount(targetUsername, newEmail)
+            Else
+                success = True
+            End If
+        Catch ex As Exception
+            success = False
+        End Try
+
+        Return success
+    End Function
+
+    Private Function EditStudentPassword(actionsAsSelf As PortalQueriesAndActions, targetUsername As String) As Boolean
         Dim newPassword As String = Nothing
 
         If SetManuallyPasswordRadioButton.Checked Then
@@ -83,10 +124,44 @@
             newPassword = PortalQueriesAndActions.RandomPasswordGenerator.GenerateRandomPassword()
         End If
 
-        If newPassword IsNot Nothing Then
-            actionsAsSelf.StudentAccountRelated.ChangePasswordOfStudentAccount(targetUsername, newPassword)
+
+        Dim success As Boolean = True
+        Try
+            If newPassword IsNot Nothing Then
+                success = actionsAsSelf.StudentAccountRelated.ChangePasswordOfStudentAccount(targetUsername, newPassword)
+            End If
+        Catch ex As Exception
+            success = False
+        End Try
+
+        Return success
+    End Function
+
+    Private Function EditStudentEnabledState(actionsAsSelf As PortalQueriesAndActions, targetUsername As String) As Boolean
+        If NoChangeDisabledStateRadioButton.Checked Then
+            Return True
         End If
-    End Sub
+
+
+        Dim studDisableValue As Boolean
+
+        If DisabledStateDisableRadioButton.Checked Then
+            studDisableValue = True
+        ElseIf DisabledStateEnableRadioButton.Checked Then
+            studDisableValue = False
+        End If
+
+
+        Dim success As Boolean
+        Try
+            success = actionsAsSelf.StudentAccountRelated.ChangeDisabledStateOfStudentAccount(targetUsername, studDisableValue)
+        Catch ex As Exception
+            success = False
+        End Try
+
+        Return success
+    End Function
+
 
 #End Region
 
@@ -129,6 +204,8 @@
     Private Sub ShowEmailErrorMsg(msg As String)
         ErrorInEmailLabel.Text = msg
         ErrorInEmailLabel.Visible = True
+
+        SuccessLabel.Visible = False
     End Sub
 
     Private Sub HideEmailErrorMsg()

@@ -27,8 +27,6 @@
         <asp:RequiredFieldValidator ID="RequiredConfirmPasswordValidator" runat="server" ErrorMessage="This field is required" ForeColor="Red" Font-Size="Small" ControlToValidate="ConfirmPasswordField" ValidationGroup="ChangePassword"></asp:RequiredFieldValidator>
         <br />
         <br />
-        <asp:CheckBox ID="ShowNewPasswordCheckBox" runat="server" Text="Show New Passwords" Width="180px" />
-        <br />
         <br />
         <asp:Label ID="CustomErrorLabel" runat="server" Font-Size="Small" ForeColor="Red" Visible="False" Width="240px"></asp:Label>
         <br />

@@ -131,6 +131,15 @@ Partial Public Class AdminHomePage_EditAdminProfile
     Protected WithEvents ErrorLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''SuccessLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SuccessLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''ConfirmChangesButton control.
     '''</summary>
     '''<remarks>

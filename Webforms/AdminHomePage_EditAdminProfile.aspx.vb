@@ -62,11 +62,31 @@
             Return
         End If
 
+        Dim errorForAdmins As IList(Of String) = New List(Of String)
+
         For Each adminUsername As String In selectedAdminUsernames
-            EditAdminAccount(adminUsername)
+            Dim success As Boolean = EditAdminAccount(adminUsername)
+            If success = False Then
+                errorForAdmins.Add(adminUsername)
+            End If
         Next
 
-        Response.Redirect(PageUrlConstants.ADMIN_VIEW_ADMIN_TABLE_PAGE_URL)
+        If errorForAdmins.Count = 0 Then
+            SuccessLabel.Visible = True
+            ErrorLabel.Visible = False
+
+        Else
+            SuccessLabel.Visible = False
+
+            Dim builder As StringBuilder = New StringBuilder()
+            builder.Append("Error in editing users: ")
+            For Each username As String In errorForAdmins
+                builder.Append(username & ", ")
+            Next
+
+            ShowErrorMessage(builder.ToString())
+        End If
+        'Response.Redirect(PageUrlConstants.ADMIN_VIEW_ADMIN_TABLE_PAGE_URL)
     End Sub
 
     Private Function AreInputsValid() As Boolean
@@ -99,28 +119,42 @@
     Private Sub ShowErrorMessage(msg As String)
         ErrorLabel.Visible = True
         ErrorLabel.Text = msg
+
+        SuccessLabel.Visible = False
     End Sub
 
-    Private Sub EditAdminAccount(username As String)
+    Private Function EditAdminAccount(username As String) As Boolean
+        Dim success As Boolean
         Try
             Dim actionAsSelf As PortalQueriesAndActions = New PortalQueriesAndActions(Session.Item(SessionConstants.LOGGED_IN_USER))
 
-            EditPrivilageMode(actionAsSelf, username)
-            EditPassword(actionAsSelf, username)
-        Catch ex As AccountDoesNotExistException
+            success = EditPrivilageMode(actionAsSelf, username) And EditPassword(actionAsSelf, username)
 
+        Catch ex As Exception 'AccountDoesNotExistException
+            success = False
         End Try
-    End Sub
 
-    Private Sub EditPrivilageMode(actionAsSelf As PortalQueriesAndActions, targetUsername As String)
+        Return success
+    End Function
+
+    Private Function EditPrivilageMode(actionAsSelf As PortalQueriesAndActions, targetUsername As String) As Boolean
         Dim newPrivilageMode As PrivilageMode = selectionOfPrivilageMode.Item(PrivilageModeDropDownList.SelectedValue)
 
-        If newPrivilageMode IsNot Nothing Then
-            actionAsSelf.AdminAccountRelated.ChangePrivilageModeOfAdminAccount(targetUsername, newPrivilageMode)
-        End If
-    End Sub
+        Dim success As Boolean
+        Try
+            If newPrivilageMode IsNot Nothing Then
+                success = actionAsSelf.AdminAccountRelated.ChangePrivilageModeOfAdminAccount(targetUsername, newPrivilageMode)
+            Else
+                success = True 'Do not edit selected
+            End If
+        Catch ex As Exception
+            success = False
+        End Try
 
-    Private Sub EditPassword(actionAsSelf As PortalQueriesAndActions, targetUsername As String)
+        Return success
+    End Function
+
+    Private Function EditPassword(actionAsSelf As PortalQueriesAndActions, targetUsername As String) As Boolean
         Dim newPassword As String = Nothing
 
         If SetManuallyRadioButton.Checked Then
@@ -129,10 +163,19 @@
             newPassword = PortalQueriesAndActions.RandomPasswordGenerator.GenerateRandomPassword()
         End If
 
-        If newPassword IsNot Nothing Then
-            actionAsSelf.AdminAccountRelated.ChangePasswordOfAdminAccount(targetUsername, newPassword)
-        End If
-    End Sub
+        Dim success As Boolean
+        Try
+            If newPassword IsNot Nothing Then
+                success = actionAsSelf.AdminAccountRelated.ChangePasswordOfAdminAccount(targetUsername, newPassword)
+            Else
+                success = True 'Do not edit selected
+            End If
+        Catch ex As Exception
+            success = False
+        End Try
+
+        Return success
+    End Function
 
 #End Region
 

@@ -6,9 +6,9 @@ Public Class StudentHomePage_CoursesEnrolled
     Private gradeSource As IGradeSource
     Private studentSource As IStudentSource
 
-    Private schoolYear As String
-    Private semesterTerm As Integer
     Private allSemYearCourseList As IReadOnlyList(Of String)
+
+    Private Const EMPTY_LABEL_DATA As String = "[EMPTY]"
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         OnPostBack()
@@ -56,16 +56,8 @@ Public Class StudentHomePage_CoursesEnrolled
             If Not allSemYearCourseList.Count = 0 Then
                 Dim semYear As String() = gradeSource.ConvertSemYearCourseStringToSemAndYearArray(allSemYearCourseList.Item(0))
 
-                Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY) = semYear(0)
-                Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY) = semYear(1)
-
-                semesterTerm = semYear(0)
-                schoolYear = semYear(1)
             End If
         Else
-
-            semesterTerm = Session.Item(SessionConstants.SEM_OF_GRADE_DISPLAY)
-            schoolYear = Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY)
 
         End If
     End Sub
@@ -90,6 +82,10 @@ Public Class StudentHomePage_CoursesEnrolled
 
             StudentCoursesGridView.DataSource = semYearCourseTable
             StudentCoursesGridView.DataBind()
+
+            NoCoursesToDisplayLabel.Visible = False
+        Else
+            NoCoursesToDisplayLabel.Visible = True
         End If
     End Sub
 
@@ -128,7 +124,12 @@ Public Class StudentHomePage_CoursesEnrolled
             builder.Append(student.MiddleName).Append(" ")
         End If
 
-        Return builder.ToString()
+        Dim returnVal = builder.ToString()
+        If returnVal.Count() = 0 Then
+            returnVal = EMPTY_LABEL_DATA
+        End If
+
+        Return returnVal
     End Function
 
 #End Region

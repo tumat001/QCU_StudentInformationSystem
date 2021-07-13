@@ -150,6 +150,8 @@
   <ItemGroup>
     <None Include="images\768px-Windows_Settings_app_icon.png" />
     <Compile Include="Codes\DataTypes\Course.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\ChangeDisabledStateOfStudentAccountAction.vb" />
+    <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\AttemptLogInAsStudentQuery.vb" />
     <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Queries\GetAllRequestDocumentOptionsListQuery.vb" />
     <Compile Include="Codes\PortalRelated\ActionsAndQueryRelated\Actions\UpdateRequestDocumentListAction.vb" />
     <Compile Include="Webforms\AdminHomePage_AddAdminAccount.aspx.designer.vb">

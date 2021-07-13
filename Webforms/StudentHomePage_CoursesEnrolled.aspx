@@ -39,6 +39,7 @@
                 </div>
                 <br />
                 <br />
+                <asp:Label ID="NoCoursesToDisplayLabel" runat="server" Text="No Courses To Display" Visible="False"></asp:Label>
             <br /></td>
         </tr>
     </table>

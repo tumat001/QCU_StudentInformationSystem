@@ -14,7 +14,9 @@
     Private Sub SetEmailField()
         Dim student As Student = studentSource.GetStudent(Session.Item(SessionConstants.LOGGED_IN_USER))
 
-        EmailTextbox.Text = student.EmailAddress
+        If student IsNot Nothing Then
+            EmailTextbox.Text = student.EmailAddress
+        End If
     End Sub
 
     Private Sub InitializeDocumentsDropDownList()
@@ -27,7 +29,11 @@
 
 
     Protected Sub SendRequestButton_Click(sender As Object, e As EventArgs) Handles SendRequestButton.Click
-        DisplaySuccessfulOperations()
+        If Not EmailTextbox.Text.Count = 0 Then
+            DisplaySuccessfulOperations()
+        Else
+            DisplayErrorInOperations("Email is empty! Contact admins to resolve this issue.")
+        End If
     End Sub
 
 

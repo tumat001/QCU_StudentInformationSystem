@@ -167,6 +167,60 @@ Partial Public Class AdminHomePage_EditStudentProfile
     Protected WithEvents ErrorInPasswordLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''SetDisabledStateLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SetDisabledStateLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''NoChangeDisabledStateRadioButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NoChangeDisabledStateRadioButton As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''DisabledStateEnableRadioButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DisabledStateEnableRadioButton As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''DisabledStateDisableRadioButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DisabledStateDisableRadioButton As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''ErrorInEdits control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ErrorInEdits As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''SuccessLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SuccessLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''ConfirmChangesButton control.
     '''</summary>
     '''<remarks>

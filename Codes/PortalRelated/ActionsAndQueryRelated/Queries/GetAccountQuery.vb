@@ -24,8 +24,8 @@ Public Class GetAccountQuery
         Using connection As SqlConnection = New SqlConnection(PORTAL_DATABASE_CONNECTION_STRING)
             connection.Open()
             Dim command As SqlCommand = connection.CreateCommand()
-            Dim sqlText As String = String.Format("SELECT [{0}] FROM [StudentAccountTable] WHERE [{1}] = @UsernameValue",
-                                    STUDENT_TABLE_EMAIL_ADDRESS_COLUMN_NAME, STUDENT_TABLE_USERNAME_COLUMN_NAME)
+            Dim sqlText As String = String.Format("SELECT [{0}], [{1}] FROM [StudentAccountTable] WHERE [{2}] = @UsernameValue",
+                                    STUDENT_TABLE_EMAIL_ADDRESS_COLUMN_NAME, STUDENT_TABLE_DISABLED_COLUMN_NAME, STUDENT_TABLE_USERNAME_COLUMN_NAME)
 
             command.CommandText = sqlText
             command.Parameters.Add(New SqlParameter("StudentAccountTable", STUDENT_TABLE_NAME))
@@ -35,9 +35,10 @@ Public Class GetAccountQuery
             If reader.Read Then
                 Dim studentUsername As String = username
                 Dim emailAddress As String = reader.GetSqlString(0).ToString()
+                Dim disabled As Boolean = reader.GetSqlBoolean(1)
                 reader.Close()
 
-                Return New StudentAccount(studentUsername, emailAddress)
+                Return New StudentAccount(studentUsername, emailAddress, disabled)
             Else
                 reader.Close()
                 Return Nothing
@@ -55,8 +56,8 @@ Public Class GetAccountQuery
             connection.Open()
             Dim command As SqlCommand = connection.CreateCommand()
 
-            Dim sqlCom As String = String.Format("Select [{0}], [{1}] FROM [StudentAccountTable]",
-                                       STUDENT_TABLE_USERNAME_COLUMN_NAME, STUDENT_TABLE_EMAIL_ADDRESS_COLUMN_NAME)
+            Dim sqlCom As String = String.Format("Select [{0}], [{1}], [{2}] FROM [StudentAccountTable]",
+                                       STUDENT_TABLE_USERNAME_COLUMN_NAME, STUDENT_TABLE_EMAIL_ADDRESS_COLUMN_NAME, STUDENT_TABLE_DISABLED_COLUMN_NAME)
             command.CommandText = sqlCom
             command.Parameters.Add(New SqlParameter("StudentAccountTable", STUDENT_TABLE_NAME))
             Dim reader As SqlDataReader = command.ExecuteReader()
@@ -65,7 +66,8 @@ Public Class GetAccountQuery
             While reader.Read
                 Dim username As String = reader.GetSqlString(0).ToString()
                 Dim emailAddress As String = reader.GetSqlString(1).ToString()
-                listOfStudents.Add(New StudentAccount(username, emailAddress))
+                Dim disabled As Boolean = reader.GetSqlBoolean(2).Value
+                listOfStudents.Add(New StudentAccount(username, emailAddress, disabled))
             End While
 
             Return listOfStudents

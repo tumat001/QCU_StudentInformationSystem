@@ -66,6 +66,8 @@
                     </asp:GridView>
                 </div>
                 <br />
+                <asp:Label ID="NoGradesToDisplayLabel" runat="server" Text="No Grades To Display" Visible="False"></asp:Label>
+                <br />
                 <br />
                 <asp:Button ID="RequestGradeSlipButton" runat="server" Text="Request Grade Slip" />
                 <br />

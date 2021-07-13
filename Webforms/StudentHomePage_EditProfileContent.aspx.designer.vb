@@ -104,15 +104,6 @@ Partial Public Class StudentHomePage_EditProfileContent
     Protected WithEvents RequiredConfirmPasswordValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''ShowNewPasswordCheckBox control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ShowNewPasswordCheckBox As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
     '''CustomErrorLabel control.
     '''</summary>
     '''<remarks>

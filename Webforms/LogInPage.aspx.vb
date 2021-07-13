@@ -72,7 +72,7 @@
 
     Private Function IfStudentCredentialsCheckOut(username As String, password As String) As Boolean
         Try
-            Return PortalQueriesAndActions.StudentQueriesAndActions.IsPasswordOfStudentAccountEqualTo(username, password)
+            Return PortalQueriesAndActions.StudentQueriesAndActions.AttemptLogInAsStudent(username, password)
         Catch ex As Exception
             Return False
         End Try

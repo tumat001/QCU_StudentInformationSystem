@@ -4,7 +4,7 @@ Class ChangePasswordOfOtherAccountAction
     Inherits BasePortalAction
 
     Private Shared ReadOnly ALLOWED_PRIVILAGE_MODES As IReadOnlyList(Of PrivilageMode) = New List(Of PrivilageMode) From {
-        PrivilageMode.SUPER_ADMIN, PrivilageMode.DEFAULT_ADMIN
+        PrivilageMode.NORMAL_ADMIN, PrivilageMode.SUPER_ADMIN, PrivilageMode.DEFAULT_ADMIN
         }
 
     ReadOnly Property ExecutorUsername As String

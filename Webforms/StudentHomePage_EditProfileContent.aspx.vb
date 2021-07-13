@@ -6,41 +6,27 @@
     Private Shared ReadOnly INVALID_NEW_PASSWORD_MESSAGE As String = "Invalid new password used!"
     Private Shared ReadOnly EXCEPTIONAL_ERROR_MESSAGE As String = "Fatal error occurred!"
 
-#Region "ShowPassword"
-
-    Protected Sub ShowNewPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowNewPasswordCheckBox.CheckedChanged
-        If ShowNewPasswordCheckBox.Checked Then
-
-            NewPasswordField.TextMode = TextBoxMode.SingleLine
-            ConfirmPasswordField.TextMode = TextBoxMode.SingleLine
-        Else
-
-            NewPasswordField.TextMode = TextBoxMode.Password
-            ConfirmPasswordField.TextMode = TextBoxMode.Password
-        End If
-    End Sub
-
-#End Region
 
 #Region "ChangePassword"
 
     Protected Sub ChangePasswordButton_Click(sender As Object, e As EventArgs) Handles ChangePasswordButton.Click
         If Not IsCurrentPasswordCorrect(CurrentPasswordField.Text) Then
-            CustomErrorLabel.Text = WRONG_CURRENT_PASSWORD_MESSAGE
+            ShowErrorInErrorMessage(WRONG_CURRENT_PASSWORD_MESSAGE)
             Return
         End If
 
         If Not IsNewPasswordValid(NewPasswordField.Text) Then
-            CustomErrorLabel.Text = INVALID_NEW_PASSWORD_MESSAGE
+            ShowErrorInErrorMessage(INVALID_NEW_PASSWORD_MESSAGE)
             Return
         End If
 
         If Not IfNewAndConfirmPasswordsMatch(NewPasswordField.Text, ConfirmPasswordField.Text) Then
-            CustomErrorLabel.Text = NEW_PASSWORDS_DO_NOT_MATCH_MESSAGE
+            ShowErrorInErrorMessage(NEW_PASSWORDS_DO_NOT_MATCH_MESSAGE)
             Return
         End If
 
         'At this point, all are satisfied
+        CustomErrorLabel.Visible = False
         ChangePasswordOfSelf()
     End Sub
 
@@ -67,9 +53,16 @@
             Dim actionAs As PortalQueriesAndActions = New PortalQueriesAndActions(user)
             actionAs.StudentAccountRelated.ChangePasswordOfStudentAccount(user, NewPasswordField.Text)
         Catch ex As Exception
-            CustomErrorLabel.Text = EXCEPTIONAL_ERROR_MESSAGE
+            ShowErrorInErrorMessage(EXCEPTIONAL_ERROR_MESSAGE)
         End Try
     End Sub
+
+    Private Sub ShowErrorInErrorMessage(errMsg As String)
+        CustomErrorLabel.Text = errMsg
+        CustomErrorLabel.Visible = True
+    End Sub
+
+
 
     Protected Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         Response.RedirectPermanent(PageUrlConstants.STUDENT_HOME_PAGE_URL)

@@ -28,6 +28,7 @@ Public Class PortalQueriesAndActions
     Friend Shared ReadOnly STUDENT_TABLE_USERNAME_COLUMN_NAME As String = "Username"
     Friend Shared ReadOnly STUDENT_TABLE_PASSWORD_COLUMN_NAME As String = "Password"
     Friend Shared ReadOnly STUDENT_TABLE_EMAIL_ADDRESS_COLUMN_NAME As String = "EmailAddress"
+    Friend Shared ReadOnly STUDENT_TABLE_DISABLED_COLUMN_NAME As String = "Disabled"
 
     Friend Shared ReadOnly ADMIN_TABLE_NAME As String = "AdminAccountTable"
     Friend Shared ReadOnly ADMIN_TABLE_USERNAME_COLUMN_NAME As String = "Username"
@@ -138,6 +139,7 @@ Public Class PortalQueriesAndActions
             Return accountChecker.IfStudentAccountExists(username)
         End Function
 
+
         ''' <summary>
         ''' Deletes the student account associated with the given username
         ''' </summary>
@@ -214,6 +216,20 @@ Public Class PortalQueriesAndActions
         End Function
 
         ''' <summary>
+        ''' Determines whether the password of the account with the provided username is equal to the provided password<br></br>
+        ''' Also factors in the state of if the student account is disabled.
+        ''' </summary>
+        ''' <param name="username">The account with the username to check the password of</param>
+        ''' <param name="password">The password</param>
+        ''' <returns>True if password of account matches with provided password, and is not disabled. False if password does not match</returns>
+        ''' <exception cref="AccountDoesNotExistException"></exception>
+        ''' <exception cref="StringConstraintsViolatedException"></exception>
+        Public Shared Function AttemptLogInAsStudent(username As String, password As String) As Boolean
+            Dim logInSim As AttemptLogInAsStudentQuery = New AttemptLogInAsStudentQuery()
+            Return logInSim.AttemptLogInAsStudent(username, password)
+        End Function
+
+        ''' <summary>
         ''' Change the current password of the provided username with the provided password
         ''' <br /><br />
         ''' No privilage level is required when changing one's own password
@@ -248,6 +264,19 @@ Public Class PortalQueriesAndActions
             Dim changeEmailAction As ChangeEmailAddressOfAccountAction = New ChangeEmailAddressOfAccountAction(Executor)
             Return changeEmailAction.ChangeEmailAddressOfStudentAccount(username, newEmail)
         End Function
+
+        ''' <summary>
+        ''' Changes the current disabled state of the provided username with the provided value
+        ''' </summary>
+        ''' <param name="username">The account with the username to change the password of</param>
+        ''' <param name="newDisabledState">The new disabled statue to use</param>
+        ''' <returns>True if disabled state of account was changed (even if the previous value is the same). False otherwise</returns>
+        ''' <exception cref="AccountDoesNotExistException"></exception>
+        Public Function ChangeDisabledStateOfStudentAccount(username As String, newDisabledState As Boolean) As Boolean
+            Dim changeStateAction As ChangeDisabledStateOfStudentAccountAction = New ChangeDisabledStateOfStudentAccountAction(Executor)
+            Return changeStateAction.ChangedDisabledStateOfStudentAccount(username, newDisabledState)
+        End Function
+
 
         Class SyncStudentQueriesAndActions
 

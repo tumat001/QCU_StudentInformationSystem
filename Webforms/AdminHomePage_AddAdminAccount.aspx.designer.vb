@@ -68,15 +68,6 @@ Partial Public Class AdminHomePage_AddAdminAccount
     Protected WithEvents PasswordField As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''PasswordRequiredValidator control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents PasswordRequiredValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
     '''ConfirmPasswordLabel control.
     '''</summary>
     '''<remarks>
@@ -93,15 +84,6 @@ Partial Public Class AdminHomePage_AddAdminAccount
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ConfirmPasswordField As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''ConfirmPasswordRequiredValidator control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ConfirmPasswordRequiredValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''GeneratePasswordCheckbox control.
@@ -147,6 +129,15 @@ Partial Public Class AdminHomePage_AddAdminAccount
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ErrorLabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''SuccessLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SuccessLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''AddAdminButton control.

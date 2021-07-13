@@ -5,10 +5,12 @@ Public Class StudentAccount
     Inherits BaseAccount
 
     Public ReadOnly Property EmailAddress As String
+    Public ReadOnly Property Disabled As Boolean
 
-    Sub New(ByVal username As String, ByVal emailAddress As String)
+    Sub New(ByVal username As String, ByVal emailAddress As String, ByVal disabled As Boolean)
         MyBase.New(username, PrivilageMode.STUDENT)
         Me.EmailAddress = emailAddress
+        Me.Disabled = disabled
     End Sub
 
     ''' <summary>
@@ -34,6 +36,8 @@ Public Class StudentAccount
         'TODO do not allow null values to be passed
         Public Property Username As String
         Public Property EmailAddress As String = ""
+
+        Public Disabled As Boolean
 
         Public Sub New(username As String)
             Me.Username = username

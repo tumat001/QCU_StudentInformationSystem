@@ -43,10 +43,11 @@
                 <asp:TextBox ID="ConfirmPasswordField" runat="server" TextMode="Password"></asp:TextBox>
                 &nbsp;
                 <br />
-                <asp:Label ID="ErrorLabel" runat="server" ForeColor="Red" Visible="False"></asp:Label>
-                <br />
                 <br />
                 --------------------<br />
+                <asp:Label ID="ErrorLabel" runat="server" ForeColor="Red" Visible="False"></asp:Label>
+    <asp:Label ID="SuccessLabel" runat="server" ForeColor="#006600" Text="Account(s) edited successfully" Visible="False"></asp:Label>
+                <br />
                 <br />
                 <asp:Button ID="ConfirmChangesButton" runat="server" Text="Confirm Changes" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

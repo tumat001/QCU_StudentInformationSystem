@@ -30,20 +30,24 @@ Public NotInheritable Class MockGradeSource
 
 
     Private Function ConstructSemesterGrade(ByRef reader As SqlDataReader) As SemesterGrades
-        reader.Read()
-        Dim studentNumber As String = reader.GetString(studentNumberColumnNum).ToString()
-        Dim semester As Integer = reader.GetInt32(semesterColumnNum)
-        Dim year As Integer = reader.GetInt32(yearColumnNum)
+        If reader.Read() Then
+            Dim studentNumber As String = reader.GetString(studentNumberColumnNum).ToString()
+            Dim semester As Integer = reader.GetInt32(semesterColumnNum)
+            Dim year As Integer = reader.GetInt32(yearColumnNum)
 
-        Dim subjGradesList As IList(Of SubjectGrade) = New List(Of SubjectGrade)
-        Dim firstSubjGrade As SubjectGrade = ConstructSubjectGrade(reader, studentNumber)
-        subjGradesList.Add(firstSubjGrade)
+            Dim subjGradesList As IList(Of SubjectGrade) = New List(Of SubjectGrade)
+            Dim firstSubjGrade As SubjectGrade = ConstructSubjectGrade(reader, studentNumber)
+            subjGradesList.Add(firstSubjGrade)
 
-        While reader.Read
-            subjGradesList.Add(ConstructSubjectGrade(reader, studentNumber))
-        End While
+            While reader.Read
+                subjGradesList.Add(ConstructSubjectGrade(reader, studentNumber))
+            End While
 
-        Return New SemesterGrades(studentNumber, subjGradesList, year, year + 1, semester)
+            Return New SemesterGrades(studentNumber, subjGradesList, year, year + 1, semester)
+
+        Else
+            Return Nothing
+        End If
     End Function
 
     Private Function ConstructSubjectGrade(ByRef reader As SqlDataReader, studentNumber As String) As SubjectGrade
@@ -100,10 +104,11 @@ Public NotInheritable Class MockGradeSource
         Dim hasResult As Boolean = False
 
         Try
-            reader.Read()
-            highestSem = reader.GetInt32(0)
-            highestYear = reader.GetInt32(1)
-            hasResult = True
+            If reader.Read() Then
+                highestSem = reader.GetInt32(0)
+                highestYear = reader.GetInt32(1)
+                hasResult = True
+            End If
         Catch e As SqlException
 
         End Try

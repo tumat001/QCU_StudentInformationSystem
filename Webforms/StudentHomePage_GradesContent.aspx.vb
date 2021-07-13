@@ -11,6 +11,8 @@ Public Class StudentHomePage_GradesContent
     Private semesterTerm As Integer
     Private allSemYearList As IReadOnlyList(Of String)
 
+    Private Const EMPTY_LABEL_DATA As String = "[EMPTY]"
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitializeGradeSource()
         InitializeStudentSource()
@@ -108,6 +110,10 @@ Public Class StudentHomePage_GradesContent
 
             StudentGradeInfoGridView.DataSource = gradesTable
             StudentGradeInfoGridView.DataBind()
+
+            NoGradesToDisplayLabel.Visible = False
+        Else
+            NoGradesToDisplayLabel.Visible = True
         End If
     End Sub
 
@@ -139,8 +145,19 @@ Public Class StudentHomePage_GradesContent
         If Not student Is Nothing Then
             StudentNameLabel.Text = GetNameOfStudent(student)
             CampusLabel.Text = student.Campus
-            SchoolYearLabel.Text = schoolYear.ToString()
-            TermLabel.Text = semesterTerm.ToString()
+
+            If schoolYear IsNot Nothing Then
+                SchoolYearLabel.Text = schoolYear
+            Else
+                SchoolYearLabel.Text = EMPTY_LABEL_DATA
+            End If
+
+            If Session.Item(SessionConstants.YEAR_OF_GRADE_DISPLAY) Then
+                TermLabel.Text = semesterTerm.ToString()
+            Else
+                TermLabel.Text = EMPTY_LABEL_DATA
+            End If
+
         End If
     End Sub
 
@@ -150,17 +167,25 @@ Public Class StudentHomePage_GradesContent
         If student.LastName IsNot Nothing AndAlso Not student.LastName.Equals("Null") Then
             builder.Append(student.LastName).Append(", ")
         End If
+
         If student.FirstName IsNot Nothing AndAlso Not student.FirstName.Equals("Null") Then
             builder.Append(student.FirstName).Append(" ")
         End If
+
         If student.AuxName IsNot Nothing AndAlso Not student.AuxName.Equals("Null") Then
             builder.Append(student.AuxName).Append(" ")
         End If
+
         If student.MiddleName IsNot Nothing AndAlso Not student.MiddleName.Equals("Null") Then
             builder.Append(student.MiddleName).Append(" ")
         End If
 
-        Return builder.ToString()
+        Dim returnVal = builder.ToString()
+        If returnVal.Count() = 0 Then
+            returnVal = EMPTY_LABEL_DATA
+        End If
+
+        Return returnVal
     End Function
 
 #End Region

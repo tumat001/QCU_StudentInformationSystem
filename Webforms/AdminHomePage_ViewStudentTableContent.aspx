@@ -20,6 +20,8 @@
                 
                 <asp:CheckBoxField DataField="Selected" HeaderText="Selected"/>
                 
+                <asp:CheckBoxField DataField="Disabled" HeaderText="Disabled" ReadOnly="True" />
+                
             </Columns>
             <PagerSettings Mode="NumericFirstLast" />
         </asp:GridView>

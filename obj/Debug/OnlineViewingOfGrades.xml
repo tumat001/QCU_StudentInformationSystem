@@ -37,6 +37,34 @@ OnlineViewingOfGrades
  Returns the Asp log object.
  </summary>
 </member>
+<member name="M:OnlineViewingOfGrades.ChangeDisabledStateOfStudentAccountAction.#ctor(System.String)">
+ <summary>
+ Instantiates a <see cref="T:OnlineViewingOfGrades.ChangePasswordOfOtherAccountAction"/> that allows the provided executor to change the password of other accounts.
+ </summary>
+ <param name="executorUsername"></param>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.ChangeDisabledStateOfStudentAccountAction.ChangedDisabledStateOfStudentAccount(System.String,System.Boolean)">
+ <summary>
+ Changes the current disabled state of the provided username with the provided value
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newDisabledState">The new disabled statue to use</param>
+ <returns>True if disabled state of account was changed (even if the previous value is the same). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.AttemptLogInAsStudentQuery.AttemptLogInAsStudent(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password.<br></br>
+ Also factors in the state of if the student account is disabled.
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password, and if the account is not disabled. False if password does not match</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
 <member name="M:OnlineViewingOfGrades.UpdateRequestDocumentListAction.#ctor(System.String)">
  <summary>
  Instantiates a <see cref="T:OnlineViewingOfGrades.CreateAdminAccountAction"/> that allows the provided executor to create accounts.
@@ -99,15 +127,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._PasswordRequiredValidator">
-<summary>
-PasswordRequiredValidator control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordLabel">
 <summary>
 ConfirmPasswordLabel control.
@@ -120,15 +139,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordField">
 <summary>
 ConfirmPasswordField control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ConfirmPasswordRequiredValidator">
-<summary>
-ConfirmPasswordRequiredValidator control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -174,6 +184,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._ErrorLabel">
 <summary>
 ErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddAdminAccount._SuccessLabel">
+<summary>
+SuccessLabel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -243,15 +262,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._PasswordRequiredValidator">
-<summary>
-PasswordRequiredValidator control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordLabel">
 <summary>
 ConfirmPasswordLabel control.
@@ -264,15 +274,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordField">
 <summary>
 ConfirmPasswordField control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ConfirmPasswordRequiredValidator">
-<summary>
-ConfirmPasswordRequiredValidator control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -318,6 +319,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._ErrorLabel">
 <summary>
 ErrorLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_AddStudentAccount._SuccessLabel">
+<summary>
+SuccessLabel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -477,6 +487,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._SuccessLabel">
+<summary>
+SuccessLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:OnlineViewingOfGrades.AdminHomePage_EditAdminProfile._ConfirmChangesButton">
 <summary>
 ConfirmChangesButton control.
@@ -579,15 +598,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._RequiredConfirmPasswordValidator">
 <summary>
 RequiredConfirmPasswordValidator control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:OnlineViewingOfGrades.AdminHomePage_EditProfileContent._ShowNewPasswordCheckBox">
-<summary>
-ShowNewPasswordCheckBox control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -759,6 +769,60 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ErrorInPasswordLabel">
 <summary>
 ErrorInPasswordLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SetDisabledStateLabel">
+<summary>
+SetDisabledStateLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._NoChangeDisabledStateRadioButton">
+<summary>
+NoChangeDisabledStateRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._DisabledStateEnableRadioButton">
+<summary>
+DisabledStateEnableRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._DisabledStateDisableRadioButton">
+<summary>
+DisabledStateDisableRadioButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._ErrorInEdits">
+<summary>
+ErrorInEdits control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.AdminHomePage_EditStudentProfile._SuccessLabel">
+<summary>
+SuccessLabel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1314,15 +1378,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._ShowNewPasswordCheckBox">
-<summary>
-ShowNewPasswordCheckBox control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:OnlineViewingOfGrades.StudentHomePage_EditProfileContent._CustomErrorLabel">
 <summary>
 CustomErrorLabel control.
@@ -1362,6 +1417,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.StudentHomePage_CoursesEnrolled._StudentCoursesGridView">
 <summary>
 StudentCoursesGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_CoursesEnrolled._NoCoursesToDisplayLabel">
+<summary>
+NoCoursesToDisplayLabel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1416,6 +1480,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._StudentGradeInfoGridView">
 <summary>
 StudentGradeInfoGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:OnlineViewingOfGrades.StudentHomePage_GradesContent._NoGradesToDisplayLabel">
+<summary>
+NoGradesToDisplayLabel control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -2163,6 +2236,17 @@ To modify move field declaration from designer file to code-behind file.
  <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
  <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
 </member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.AttemptLogInAsStudent(System.String,System.String)">
+ <summary>
+ Determines whether the password of the account with the provided username is equal to the provided password<br></br>
+ Also factors in the state of if the student account is disabled.
+ </summary>
+ <param name="username">The account with the username to check the password of</param>
+ <param name="password">The password</param>
+ <returns>True if password of account matches with provided password, and is not disabled. False if password does not match</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
+ <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
 <member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.ChangePasswordOfStudentAccount(System.String,System.String)">
  <summary>
  Change the current password of the provided username with the provided password
@@ -2186,6 +2270,15 @@ To modify move field declaration from designer file to code-behind file.
  <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
  <exception cref="T:OnlineViewingOfGrades.PrivilageLevelNotMetException"></exception>
  <exception cref="T:OnlineViewingOfGrades.StringConstraintsViolatedException"></exception>
+</member>
+<member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.ChangeDisabledStateOfStudentAccount(System.String,System.Boolean)">
+ <summary>
+ Changes the current disabled state of the provided username with the provided value
+ </summary>
+ <param name="username">The account with the username to change the password of</param>
+ <param name="newDisabledState">The new disabled statue to use</param>
+ <returns>True if disabled state of account was changed (even if the previous value is the same). False otherwise</returns>
+ <exception cref="T:OnlineViewingOfGrades.AccountDoesNotExistException"></exception>
 </member>
 <member name="M:OnlineViewingOfGrades.PortalQueriesAndActions.StudentQueriesAndActions.SyncStudentQueriesAndActions.PeekAccountlessStudents(OnlineViewingOfGrades.IStudentSource)">
  <summary>

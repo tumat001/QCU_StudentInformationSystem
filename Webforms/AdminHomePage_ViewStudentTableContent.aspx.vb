@@ -32,6 +32,7 @@
         studentTable.Columns.Add("Username", "".GetType)
         studentTable.Columns.Add("EmailAddress", "".GetType)
         studentTable.Columns.Add("Selected", True.GetType)
+        studentTable.Columns.Add("Disabled", True.GetType)
 
         For Each account As StudentAccount In filteredStudentsList
             Dim studentRow As DataRow = studentTable.NewRow()
@@ -41,6 +42,9 @@
 
             Dim isSelected = selectedStudentUsernameList.Contains(account.Username)
             studentRow.Item("Selected") = isSelected
+
+            studentRow.Item("Disabled") = account.Disabled
+
 
             studentTable.Rows.Add(studentRow)
         Next

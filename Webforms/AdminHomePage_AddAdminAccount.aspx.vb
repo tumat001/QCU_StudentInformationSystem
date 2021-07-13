@@ -8,8 +8,6 @@ Public Class AdminHomePage_AddAdminAccount
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         OnPostBack()
         OnNonPostBack()
-
-        InitializePrivilageModeList()
     End Sub
 
 #Region "OnPostBack"
@@ -26,7 +24,7 @@ Public Class AdminHomePage_AddAdminAccount
 
     Private Sub OnNonPostBack()
         If Not IsPostBack Then
-
+            InitializePrivilageModeList()
         End If
     End Sub
 
@@ -50,6 +48,11 @@ Public Class AdminHomePage_AddAdminAccount
             Return
         End If
 
+        If Not GeneratePasswordCheckbox.Checked And PasswordField.Text.Length = 0 Then
+            ShowErrorInErrorMessage("Password cannot be empty")
+            Return
+        End If
+
         If Not IsPasswordValid() Then
             ShowErrorInErrorMessage("Password is not valid")
             Return
@@ -66,7 +69,6 @@ Public Class AdminHomePage_AddAdminAccount
             Return
         End If
 
-        HideErrorMessage()
         AddAdmin()
     End Sub
 
@@ -103,6 +105,8 @@ Public Class AdminHomePage_AddAdminAccount
     Private Sub ShowErrorInErrorMessage(errorMsg As String)
         ErrorLabel.Visible = True
         ErrorLabel.Text = errorMsg
+
+        SuccessLabel.Visible = False
     End Sub
 
     Private Sub HideErrorMessage()
@@ -119,7 +123,24 @@ Public Class AdminHomePage_AddAdminAccount
 
         Dim adminExecuterUsername As String = Session.Item(SessionConstants.LOGGED_IN_USER)
         Dim action As PortalQueriesAndActions = New PortalQueriesAndActions(adminExecuterUsername)
-        action.AdminAccountRelated.AttemptCreateAdminAccount(builder, password)
+
+        Dim success As Boolean = False
+        Try
+            success = action.AdminAccountRelated.AttemptCreateAdminAccount(builder, password)
+        Catch ex As AccountAlreadyExistsException
+            ShowErrorInErrorMessage("Error occurred. Account already exists")
+            SuccessLabel.Visible = False
+        Catch ex As Exception
+            ShowErrorInErrorMessage("Error occurred.")
+            SuccessLabel.Visible = False
+        End Try
+
+
+        If success Then
+            HideErrorMessage()
+            SuccessLabel.Visible = True
+        End If
+
     End Sub
 
     Private Function GetPasswordToUse() As String

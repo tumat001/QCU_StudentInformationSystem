@@ -35,7 +35,7 @@
             Dim adminRow As DataRow = adminTable.NewRow()
 
             adminRow.Item("Username") = account.Username
-            adminRow.Item("PrivilageMode") = account.PrivilageMode.ToString()
+            adminRow.Item("PrivilageMode") = account.PrivilageMode.DisplayName
 
             Dim isSelected = selectedAdminUsernameList.Contains(account.Username)
             adminRow.Item("Selected") = isSelected
